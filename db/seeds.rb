@@ -7,6 +7,11 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 require 'CSV'
 #
-CSV.foreach('seed_csvs/markets.csv') do |csv_obj|
-  Market.create(id: csv_obj[0].to_i, name: csv_obj[1], address: csv_obj[2], city: csv_obj[3], county: csv_obj[4], state: csv_obj[5], zip: csv_obj[6])
+# CSV.foreach('seed_csvs/markets.csv') do |csv_obj|
+#   Market.create(id: csv_obj[0].to_i, name: csv_obj[1], address: csv_obj[2], city: csv_obj[3], county: csv_obj[4], state: csv_obj[5], zip: csv_obj[6])
+# end
+
+#
+CSV.foreach('seed_csvs/vendors.csv') do |csv_obj|
+  Vendor.create(id: csv_obj[0].to_i, name: csv_obj[1], num_employees: csv_obj[2], market_id: csv_obj[3])
 end

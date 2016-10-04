@@ -308,3 +308,1391 @@ Migrating to CreateProducts (20161004231545)
   [1m[35mSQL (0.2ms)[0m  INSERT INTO "markets" ("id", "name", "address", "city", "county", "state", "zip", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)  [["id", 92], ["name", "Mason Area Farmers Market"], ["address", "100 block East Maple at Jefferson (in street)"], ["city", "Mason"], ["county", "Ingham"], ["state", "Michigan"], ["zip", "48854"], ["created_at", "2016-10-04 23:35:55.748216"], ["updated_at", "2016-10-04 23:35:55.748216"]]
   [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
   [1m[36mMarket Load (1.9ms)[0m  [1mSELECT "markets".* FROM "markets"[0m
+  [1m[36mMarket Load (2.3ms)[0m  [1mSELECT "markets".* FROM "markets"[0m
+  [1m[35mMarket Load (1.7ms)[0m  SELECT "markets".* FROM "markets"
+  [1m[36mMarket Load (0.5ms)[0m  [1mSELECT "markets"."address" FROM "markets"[0m
+  [1m[35mMarket Load (1.3ms)[0m  SELECT  "markets".* FROM "markets"  ORDER BY "markets"."id" ASC LIMIT 1
+  [1m[36mMarket Load (8.1ms)[0m  [1mSELECT "markets".* FROM "markets"[0m
+  [1m[35mMarket Load (0.2ms)[0m  SELECT  "markets".* FROM "markets" WHERE "markets"."id" = ? LIMIT 1  [["id", nil]]
+  [1m[36mMarket Load (9.2ms)[0m  [1mSELECT "markets".* FROM "markets"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 1], ["name", "Feil-Farrell"], ["num_employees", 8], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.437170"], ["updated_at", "2016-10-04 23:49:12.437170"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 2], ["name", "Hamill, Kilback and Pfeffer"], ["num_employees", 5], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.443160"], ["updated_at", "2016-10-04 23:49:12.443160"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 3], ["name", "Breitenberg Inc"], ["num_employees", 5], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.445055"], ["updated_at", "2016-10-04 23:49:12.445055"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 4], ["name", "Kris and Sons"], ["num_employees", 5], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.446821"], ["updated_at", "2016-10-04 23:49:12.446821"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 5], ["name", "Reynolds, Schmitt and Klocko"], ["num_employees", 3], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.448582"], ["updated_at", "2016-10-04 23:49:12.448582"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 6], ["name", "Zulauf and Sons"], ["num_employees", 8], ["market_id", 1], ["created_at", "2016-10-04 23:49:12.450348"], ["updated_at", "2016-10-04 23:49:12.450348"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 7], ["name", "Bechtelar Inc"], ["num_employees", 4], ["market_id", 2], ["created_at", "2016-10-04 23:49:12.452505"], ["updated_at", "2016-10-04 23:49:12.452505"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 8], ["name", "Stamm Inc"], ["num_employees", 2], ["market_id", 2], ["created_at", "2016-10-04 23:49:12.454485"], ["updated_at", "2016-10-04 23:49:12.454485"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 9], ["name", "Quigley, Breitenberg and Schuster"], ["num_employees", 2], ["market_id", 2], ["created_at", "2016-10-04 23:49:12.456434"], ["updated_at", "2016-10-04 23:49:12.456434"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 10], ["name", "Kertzmann LLC"], ["num_employees", 11], ["market_id", 3], ["created_at", "2016-10-04 23:49:12.459016"], ["updated_at", "2016-10-04 23:49:12.459016"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 11], ["name", "Donnelly-Quigley"], ["num_employees", 7], ["market_id", 3], ["created_at", "2016-10-04 23:49:12.461330"], ["updated_at", "2016-10-04 23:49:12.461330"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 12], ["name", "Windler Inc"], ["num_employees", 4], ["market_id", 3], ["created_at", "2016-10-04 23:49:12.464038"], ["updated_at", "2016-10-04 23:49:12.464038"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 13], ["name", "Grady, Hudson and Olson"], ["num_employees", 11], ["market_id", 4], ["created_at", "2016-10-04 23:49:12.466194"], ["updated_at", "2016-10-04 23:49:12.466194"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 14], ["name", "Stracke Group"], ["num_employees", 2], ["market_id", 4], ["created_at", "2016-10-04 23:49:12.468348"], ["updated_at", "2016-10-04 23:49:12.468348"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 15], ["name", "Hyatt-King"], ["num_employees", 3], ["market_id", 4], ["created_at", "2016-10-04 23:49:12.470314"], ["updated_at", "2016-10-04 23:49:12.470314"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 16], ["name", "Homenick-Kuhn"], ["num_employees", 4], ["market_id", 4], ["created_at", "2016-10-04 23:49:12.472229"], ["updated_at", "2016-10-04 23:49:12.472229"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 17], ["name", "Langosh, Krajcik and Langosh"], ["num_employees", 11], ["market_id", 5], ["created_at", "2016-10-04 23:49:12.474056"], ["updated_at", "2016-10-04 23:49:12.474056"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 18], ["name", "Von-Hamill"], ["num_employees", 10], ["market_id", 5], ["created_at", "2016-10-04 23:49:12.476051"], ["updated_at", "2016-10-04 23:49:12.476051"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 19], ["name", "Labadie-Tremblay"], ["num_employees", 2], ["market_id", 6], ["created_at", "2016-10-04 23:49:12.478072"], ["updated_at", "2016-10-04 23:49:12.478072"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 20], ["name", "Ledner Group"], ["num_employees", 7], ["market_id", 6], ["created_at", "2016-10-04 23:49:12.479987"], ["updated_at", "2016-10-04 23:49:12.479987"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 21], ["name", "Upton-Bruen"], ["num_employees", 10], ["market_id", 6], ["created_at", "2016-10-04 23:49:12.481869"], ["updated_at", "2016-10-04 23:49:12.481869"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 22], ["name", "Runolfsson and Sons"], ["num_employees", 2], ["market_id", 7], ["created_at", "2016-10-04 23:49:12.484223"], ["updated_at", "2016-10-04 23:49:12.484223"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 23], ["name", "Wilderman, Marks and Luettgen"], ["num_employees", 3], ["market_id", 7], ["created_at", "2016-10-04 23:49:12.486705"], ["updated_at", "2016-10-04 23:49:12.486705"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 24], ["name", "Heaney, Schiller and Stehr"], ["num_employees", 7], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.488919"], ["updated_at", "2016-10-04 23:49:12.488919"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 25], ["name", "Veum, Dickinson and Conroy"], ["num_employees", 9], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.490730"], ["updated_at", "2016-10-04 23:49:12.490730"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 26], ["name", "Schmitt Group"], ["num_employees", 3], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.492622"], ["updated_at", "2016-10-04 23:49:12.492622"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 27], ["name", "Ankunding-Prosacco"], ["num_employees", 10], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.494469"], ["updated_at", "2016-10-04 23:49:12.494469"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 28], ["name", "Watsica and Sons"], ["num_employees", 10], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.496451"], ["updated_at", "2016-10-04 23:49:12.496451"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 29], ["name", "White, Smith and Weimann"], ["num_employees", 7], ["market_id", 8], ["created_at", "2016-10-04 23:49:12.498543"], ["updated_at", "2016-10-04 23:49:12.498543"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 30], ["name", "Koelpin, Koelpin and Wintheiser"], ["num_employees", 10], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.500771"], ["updated_at", "2016-10-04 23:49:12.500771"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 31], ["name", "Bernhard-Harber"], ["num_employees", 6], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.503344"], ["updated_at", "2016-10-04 23:49:12.503344"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 32], ["name", "Jakubowski-Robel"], ["num_employees", 7], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.505659"], ["updated_at", "2016-10-04 23:49:12.505659"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 33], ["name", "Breitenberg, Mante and Glover"], ["num_employees", 2], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.507834"], ["updated_at", "2016-10-04 23:49:12.507834"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 34], ["name", "Jacobs-McGlynn"], ["num_employees", 10], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.509847"], ["updated_at", "2016-10-04 23:49:12.509847"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 35], ["name", "Runolfsdottir Inc"], ["num_employees", 9], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.511888"], ["updated_at", "2016-10-04 23:49:12.511888"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 36], ["name", "Wuckert Inc"], ["num_employees", 4], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.513827"], ["updated_at", "2016-10-04 23:49:12.513827"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 37], ["name", "Gerhold, Reilly and Morissette"], ["num_employees", 9], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.515703"], ["updated_at", "2016-10-04 23:49:12.515703"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 38], ["name", "Marvin, Casper and Krajcik"], ["num_employees", 10], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.517943"], ["updated_at", "2016-10-04 23:49:12.517943"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 39], ["name", "Weissnat LLC"], ["num_employees", 11], ["market_id", 9], ["created_at", "2016-10-04 23:49:12.520925"], ["updated_at", "2016-10-04 23:49:12.520925"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 40], ["name", "Dickens-Weissnat"], ["num_employees", 1], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.522939"], ["updated_at", "2016-10-04 23:49:12.522939"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 41], ["name", "Kessler-Ziemann"], ["num_employees", 1], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.524794"], ["updated_at", "2016-10-04 23:49:12.524794"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 42], ["name", "Tillman, Lockman and Klein"], ["num_employees", 9], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.526709"], ["updated_at", "2016-10-04 23:49:12.526709"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 43], ["name", "Cartwright LLC"], ["num_employees", 11], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.528847"], ["updated_at", "2016-10-04 23:49:12.528847"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 44], ["name", "Kassulke, Leannon and Bins"], ["num_employees", 7], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.531274"], ["updated_at", "2016-10-04 23:49:12.531274"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 45], ["name", "Hyatt, Conroy and Ortiz"], ["num_employees", 5], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.533534"], ["updated_at", "2016-10-04 23:49:12.533534"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 46], ["name", "Cartwright-VonRueden"], ["num_employees", 3], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.535879"], ["updated_at", "2016-10-04 23:49:12.535879"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 47], ["name", "Yost LLC"], ["num_employees", 6], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.537886"], ["updated_at", "2016-10-04 23:49:12.537886"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 48], ["name", "Greenfelder Inc"], ["num_employees", 8], ["market_id", 10], ["created_at", "2016-10-04 23:49:12.539847"], ["updated_at", "2016-10-04 23:49:12.539847"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 49], ["name", "Tromp Inc"], ["num_employees", 10], ["market_id", 11], ["created_at", "2016-10-04 23:49:12.542026"], ["updated_at", "2016-10-04 23:49:12.542026"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 50], ["name", "Shields Inc"], ["num_employees", 3], ["market_id", 11], ["created_at", "2016-10-04 23:49:12.544244"], ["updated_at", "2016-10-04 23:49:12.544244"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 51], ["name", "Dicki LLC"], ["num_employees", 4], ["market_id", 12], ["created_at", "2016-10-04 23:49:12.547062"], ["updated_at", "2016-10-04 23:49:12.547062"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 52], ["name", "Bayer Inc"], ["num_employees", 3], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.549543"], ["updated_at", "2016-10-04 23:49:12.549543"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 53], ["name", "Dibbert Inc"], ["num_employees", 10], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.552170"], ["updated_at", "2016-10-04 23:49:12.552170"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 54], ["name", "Parker-Thiel"], ["num_employees", 4], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.554130"], ["updated_at", "2016-10-04 23:49:12.554130"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 55], ["name", "Greenholt, Will and Grant"], ["num_employees", 10], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.555947"], ["updated_at", "2016-10-04 23:49:12.555947"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 56], ["name", "Wolf and Sons"], ["num_employees", 3], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.557734"], ["updated_at", "2016-10-04 23:49:12.557734"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 57], ["name", "Schimmel and Sons"], ["num_employees", 2], ["market_id", 13], ["created_at", "2016-10-04 23:49:12.559691"], ["updated_at", "2016-10-04 23:49:12.559691"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 58], ["name", "Ondricka-Wunsch"], ["num_employees", 1], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.561968"], ["updated_at", "2016-10-04 23:49:12.561968"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 59], ["name", "Hoeger, Hoeger and Grady"], ["num_employees", 10], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.563990"], ["updated_at", "2016-10-04 23:49:12.563990"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 60], ["name", "Bosco-Schinner"], ["num_employees", 6], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.565864"], ["updated_at", "2016-10-04 23:49:12.565864"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 61], ["name", "Larson, Mosciski and Murazik"], ["num_employees", 6], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.567729"], ["updated_at", "2016-10-04 23:49:12.567729"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 62], ["name", "Grady-Senger"], ["num_employees", 4], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.569729"], ["updated_at", "2016-10-04 23:49:12.569729"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 63], ["name", "Reilly-Howell"], ["num_employees", 8], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.571645"], ["updated_at", "2016-10-04 23:49:12.571645"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 64], ["name", "Farrell-Altenwerth"], ["num_employees", 4], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.573637"], ["updated_at", "2016-10-04 23:49:12.573637"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 65], ["name", "Schowalter, Runolfsson and Muller"], ["num_employees", 1], ["market_id", 14], ["created_at", "2016-10-04 23:49:12.575649"], ["updated_at", "2016-10-04 23:49:12.575649"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 66], ["name", "Emard-Streich"], ["num_employees", 5], ["market_id", 15], ["created_at", "2016-10-04 23:49:12.577707"], ["updated_at", "2016-10-04 23:49:12.577707"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 67], ["name", "Eichmann Group"], ["num_employees", 8], ["market_id", 16], ["created_at", "2016-10-04 23:49:12.579865"], ["updated_at", "2016-10-04 23:49:12.579865"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 68], ["name", "Spinka, Russel and Smith"], ["num_employees", 1], ["market_id", 16], ["created_at", "2016-10-04 23:49:12.581830"], ["updated_at", "2016-10-04 23:49:12.581830"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 69], ["name", "Bartoletti-Parker"], ["num_employees", 1], ["market_id", 16], ["created_at", "2016-10-04 23:49:12.583901"], ["updated_at", "2016-10-04 23:49:12.583901"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 70], ["name", "Renner-Wolff"], ["num_employees", 3], ["market_id", 16], ["created_at", "2016-10-04 23:49:12.585853"], ["updated_at", "2016-10-04 23:49:12.585853"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 71], ["name", "Haag-Padberg"], ["num_employees", 3], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.587662"], ["updated_at", "2016-10-04 23:49:12.587662"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 72], ["name", "O'Reilly, Hirthe and Hayes"], ["num_employees", 9], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.589505"], ["updated_at", "2016-10-04 23:49:12.589505"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 73], ["name", "Mante Group"], ["num_employees", 6], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.595318"], ["updated_at", "2016-10-04 23:49:12.595318"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 74], ["name", "Howe, Swaniawski and Hand"], ["num_employees", 10], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.597447"], ["updated_at", "2016-10-04 23:49:12.597447"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 75], ["name", "Howell, McCullough and Wisozk"], ["num_employees", 10], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.599316"], ["updated_at", "2016-10-04 23:49:12.599316"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 76], ["name", "Gleichner-Hermann"], ["num_employees", 3], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.601059"], ["updated_at", "2016-10-04 23:49:12.601059"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 77], ["name", "Hirthe and Sons"], ["num_employees", 3], ["market_id", 17], ["created_at", "2016-10-04 23:49:12.602879"], ["updated_at", "2016-10-04 23:49:12.602879"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 78], ["name", "Murazik, Stoltenberg and Pfannerstill"], ["num_employees", 11], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.604603"], ["updated_at", "2016-10-04 23:49:12.604603"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 79], ["name", "Lindgren and Sons"], ["num_employees", 9], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.606487"], ["updated_at", "2016-10-04 23:49:12.606487"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 80], ["name", "Spinka Inc"], ["num_employees", 4], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.608463"], ["updated_at", "2016-10-04 23:49:12.608463"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 81], ["name", "Satterfield, Reilly and Hudson"], ["num_employees", 1], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.610220"], ["updated_at", "2016-10-04 23:49:12.610220"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 82], ["name", "Purdy-Kerluke"], ["num_employees", 5], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.612028"], ["updated_at", "2016-10-04 23:49:12.612028"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 83], ["name", "Goyette Inc"], ["num_employees", 1], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.613892"], ["updated_at", "2016-10-04 23:49:12.613892"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 84], ["name", "Kuvalis Inc"], ["num_employees", 7], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.615716"], ["updated_at", "2016-10-04 23:49:12.615716"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 85], ["name", "Kling, Dicki and Murphy"], ["num_employees", 3], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.617818"], ["updated_at", "2016-10-04 23:49:12.617818"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 86], ["name", "Hoeger, Schulist and Medhurst"], ["num_employees", 8], ["market_id", 18], ["created_at", "2016-10-04 23:49:12.620143"], ["updated_at", "2016-10-04 23:49:12.620143"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 87], ["name", "Schumm, Schneider and Schuppe"], ["num_employees", 4], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.622389"], ["updated_at", "2016-10-04 23:49:12.622389"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 88], ["name", "Farrell-Davis"], ["num_employees", 5], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.624548"], ["updated_at", "2016-10-04 23:49:12.624548"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 89], ["name", "Strosin and Sons"], ["num_employees", 1], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.626563"], ["updated_at", "2016-10-04 23:49:12.626563"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 90], ["name", "Gorczany and Sons"], ["num_employees", 3], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.628585"], ["updated_at", "2016-10-04 23:49:12.628585"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 91], ["name", "Ortiz, Beatty and Kulas"], ["num_employees", 8], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.630652"], ["updated_at", "2016-10-04 23:49:12.630652"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 92], ["name", "Gerhold Inc"], ["num_employees", 11], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.632454"], ["updated_at", "2016-10-04 23:49:12.632454"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 93], ["name", "Mayer, Streich and Schmeler"], ["num_employees", 11], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.634551"], ["updated_at", "2016-10-04 23:49:12.634551"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 94], ["name", "Bahringer-Zieme"], ["num_employees", 8], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.636814"], ["updated_at", "2016-10-04 23:49:12.636814"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 95], ["name", "Bernier, Moen and Torp"], ["num_employees", 1], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.638951"], ["updated_at", "2016-10-04 23:49:12.638951"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 96], ["name", "Moen, Thiel and Osinski"], ["num_employees", 3], ["market_id", 19], ["created_at", "2016-10-04 23:49:12.641263"], ["updated_at", "2016-10-04 23:49:12.641263"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 97], ["name", "Davis Group"], ["num_employees", 10], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.643206"], ["updated_at", "2016-10-04 23:49:12.643206"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 98], ["name", "Upton, Stanton and Hyatt"], ["num_employees", 2], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.645123"], ["updated_at", "2016-10-04 23:49:12.645123"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 99], ["name", "Harris-Monahan"], ["num_employees", 11], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.646943"], ["updated_at", "2016-10-04 23:49:12.646943"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 100], ["name", "Cormier, Roberts and Volkman"], ["num_employees", 6], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.649153"], ["updated_at", "2016-10-04 23:49:12.649153"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 101], ["name", "Beahan, Stiedemann and Hills"], ["num_employees", 11], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.651717"], ["updated_at", "2016-10-04 23:49:12.651717"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 102], ["name", "Stroman-Kihn"], ["num_employees", 5], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.653909"], ["updated_at", "2016-10-04 23:49:12.653909"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 103], ["name", "Kunde-DuBuque"], ["num_employees", 11], ["market_id", 20], ["created_at", "2016-10-04 23:49:12.655775"], ["updated_at", "2016-10-04 23:49:12.655775"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 104], ["name", "Dickinson-D'Amore"], ["num_employees", 5], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.657641"], ["updated_at", "2016-10-04 23:49:12.657641"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 105], ["name", "Jacobson, Kohler and Bode"], ["num_employees", 1], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.659417"], ["updated_at", "2016-10-04 23:49:12.659417"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 106], ["name", "Metz and Sons"], ["num_employees", 8], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.661630"], ["updated_at", "2016-10-04 23:49:12.661630"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 107], ["name", "Renner, Aufderhar and MacGyver"], ["num_employees", 11], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.664412"], ["updated_at", "2016-10-04 23:49:12.664412"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 108], ["name", "Schmitt, Brekke and Hoeger"], ["num_employees", 7], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.666667"], ["updated_at", "2016-10-04 23:49:12.666667"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 109], ["name", "Hammes, Greenholt and Wyman"], ["num_employees", 1], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.668927"], ["updated_at", "2016-10-04 23:49:12.668927"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 110], ["name", "Parisian and Sons"], ["num_employees", 4], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.670753"], ["updated_at", "2016-10-04 23:49:12.670753"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 111], ["name", "Schoen-Effertz"], ["num_employees", 5], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.672726"], ["updated_at", "2016-10-04 23:49:12.672726"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 112], ["name", "Walker-O'Keefe"], ["num_employees", 1], ["market_id", 21], ["created_at", "2016-10-04 23:49:12.674578"], ["updated_at", "2016-10-04 23:49:12.674578"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 113], ["name", "Smith Group"], ["num_employees", 8], ["market_id", 23], ["created_at", "2016-10-04 23:49:12.676488"], ["updated_at", "2016-10-04 23:49:12.676488"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 114], ["name", "Friesen, Schiller and Leuschke"], ["num_employees", 5], ["market_id", 23], ["created_at", "2016-10-04 23:49:12.678496"], ["updated_at", "2016-10-04 23:49:12.678496"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 115], ["name", "Macejkovic and Sons"], ["num_employees", 6], ["market_id", 23], ["created_at", "2016-10-04 23:49:12.680375"], ["updated_at", "2016-10-04 23:49:12.680375"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 116], ["name", "Donnelly Inc"], ["num_employees", 9], ["market_id", 23], ["created_at", "2016-10-04 23:49:12.682418"], ["updated_at", "2016-10-04 23:49:12.682418"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 117], ["name", "Durgan, Heller and Greenfelder"], ["num_employees", 8], ["market_id", 23], ["created_at", "2016-10-04 23:49:12.684242"], ["updated_at", "2016-10-04 23:49:12.684242"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 118], ["name", "Kshlerin, Nader and Windler"], ["num_employees", 5], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.686214"], ["updated_at", "2016-10-04 23:49:12.686214"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 119], ["name", "Bins, Rice and McClure"], ["num_employees", 8], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.688116"], ["updated_at", "2016-10-04 23:49:12.688116"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 120], ["name", "Kozey Inc"], ["num_employees", 6], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.689883"], ["updated_at", "2016-10-04 23:49:12.689883"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 121], ["name", "Collier, Wolff and Crist"], ["num_employees", 4], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.691977"], ["updated_at", "2016-10-04 23:49:12.691977"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 122], ["name", "Bayer, Renner and Terry"], ["num_employees", 9], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.694297"], ["updated_at", "2016-10-04 23:49:12.694297"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 123], ["name", "Nikolaus-Emmerich"], ["num_employees", 10], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.696251"], ["updated_at", "2016-10-04 23:49:12.696251"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 124], ["name", "Wehner LLC"], ["num_employees", 5], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.698102"], ["updated_at", "2016-10-04 23:49:12.698102"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 125], ["name", "Lubowitz, Wolff and Doyle"], ["num_employees", 4], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.699872"], ["updated_at", "2016-10-04 23:49:12.699872"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 126], ["name", "Mayer LLC"], ["num_employees", 4], ["market_id", 24], ["created_at", "2016-10-04 23:49:12.701628"], ["updated_at", "2016-10-04 23:49:12.701628"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 127], ["name", "Jacobson-Jacobi"], ["num_employees", 6], ["market_id", 25], ["created_at", "2016-10-04 23:49:12.703583"], ["updated_at", "2016-10-04 23:49:12.703583"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 128], ["name", "Jacobson Inc"], ["num_employees", 11], ["market_id", 25], ["created_at", "2016-10-04 23:49:12.705534"], ["updated_at", "2016-10-04 23:49:12.705534"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 129], ["name", "Runolfsdottir-Powlowski"], ["num_employees", 11], ["market_id", 25], ["created_at", "2016-10-04 23:49:12.707387"], ["updated_at", "2016-10-04 23:49:12.707387"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 130], ["name", "Jones-Abshire"], ["num_employees", 2], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.709100"], ["updated_at", "2016-10-04 23:49:12.709100"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 131], ["name", "Marks, Beer and Monahan"], ["num_employees", 4], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.710928"], ["updated_at", "2016-10-04 23:49:12.710928"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 132], ["name", "Feeney Group"], ["num_employees", 8], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.713018"], ["updated_at", "2016-10-04 23:49:12.713018"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 133], ["name", "Torphy, Koepp and Hintz"], ["num_employees", 11], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.714891"], ["updated_at", "2016-10-04 23:49:12.714891"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 134], ["name", "Mills, Kemmer and Mertz"], ["num_employees", 11], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.716693"], ["updated_at", "2016-10-04 23:49:12.716693"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 135], ["name", "Hills, Fisher and Brakus"], ["num_employees", 9], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.718540"], ["updated_at", "2016-10-04 23:49:12.718540"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 136], ["name", "Collins-Stanton"], ["num_employees", 11], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.720356"], ["updated_at", "2016-10-04 23:49:12.720356"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 137], ["name", "Bailey, Davis and McClure"], ["num_employees", 2], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.722208"], ["updated_at", "2016-10-04 23:49:12.722208"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 138], ["name", "Cronin, Luettgen and Effertz"], ["num_employees", 10], ["market_id", 26], ["created_at", "2016-10-04 23:49:12.724248"], ["updated_at", "2016-10-04 23:49:12.724248"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 139], ["name", "Fay-Marvin"], ["num_employees", 2], ["market_id", 27], ["created_at", "2016-10-04 23:49:12.726146"], ["updated_at", "2016-10-04 23:49:12.726146"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 140], ["name", "Hermiston, Prosacco and Durgan"], ["num_employees", 10], ["market_id", 27], ["created_at", "2016-10-04 23:49:12.728087"], ["updated_at", "2016-10-04 23:49:12.728087"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 141], ["name", "Waelchi-Rodriguez"], ["num_employees", 11], ["market_id", 27], ["created_at", "2016-10-04 23:49:12.729801"], ["updated_at", "2016-10-04 23:49:12.729801"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 142], ["name", "Ortiz-Gutmann"], ["num_employees", 6], ["market_id", 28], ["created_at", "2016-10-04 23:49:12.731486"], ["updated_at", "2016-10-04 23:49:12.731486"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 143], ["name", "Rohan-Roob"], ["num_employees", 10], ["market_id", 28], ["created_at", "2016-10-04 23:49:12.733562"], ["updated_at", "2016-10-04 23:49:12.733562"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 144], ["name", "Pfannerstill Group"], ["num_employees", 7], ["market_id", 28], ["created_at", "2016-10-04 23:49:12.735970"], ["updated_at", "2016-10-04 23:49:12.735970"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 145], ["name", "Rutherford-Volkman"], ["num_employees", 10], ["market_id", 28], ["created_at", "2016-10-04 23:49:12.738268"], ["updated_at", "2016-10-04 23:49:12.738268"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 146], ["name", "Davis Inc"], ["num_employees", 8], ["market_id", 29], ["created_at", "2016-10-04 23:49:12.740223"], ["updated_at", "2016-10-04 23:49:12.740223"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 147], ["name", "Greenfelder, Ebert and Wyman"], ["num_employees", 2], ["market_id", 29], ["created_at", "2016-10-04 23:49:12.742143"], ["updated_at", "2016-10-04 23:49:12.742143"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 148], ["name", "Ullrich LLC"], ["num_employees", 10], ["market_id", 29], ["created_at", "2016-10-04 23:49:12.744260"], ["updated_at", "2016-10-04 23:49:12.744260"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 149], ["name", "Nolan Inc"], ["num_employees", 9], ["market_id", 29], ["created_at", "2016-10-04 23:49:12.746374"], ["updated_at", "2016-10-04 23:49:12.746374"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 150], ["name", "Donnelly, Bernier and Waelchi"], ["num_employees", 4], ["market_id", 29], ["created_at", "2016-10-04 23:49:12.748372"], ["updated_at", "2016-10-04 23:49:12.748372"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 151], ["name", "Gleichner and Sons"], ["num_employees", 2], ["market_id", 30], ["created_at", "2016-10-04 23:49:12.750057"], ["updated_at", "2016-10-04 23:49:12.750057"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 152], ["name", "Heathcote Group"], ["num_employees", 9], ["market_id", 31], ["created_at", "2016-10-04 23:49:12.751844"], ["updated_at", "2016-10-04 23:49:12.751844"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 153], ["name", "Larkin-Bergstrom"], ["num_employees", 7], ["market_id", 31], ["created_at", "2016-10-04 23:49:12.754217"], ["updated_at", "2016-10-04 23:49:12.754217"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 154], ["name", "Casper-Schuppe"], ["num_employees", 11], ["market_id", 31], ["created_at", "2016-10-04 23:49:12.756612"], ["updated_at", "2016-10-04 23:49:12.756612"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 155], ["name", "Stanton, Strosin and Rogahn"], ["num_employees", 8], ["market_id", 32], ["created_at", "2016-10-04 23:49:12.758604"], ["updated_at", "2016-10-04 23:49:12.758604"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 156], ["name", "Powlowski, Rosenbaum and Funk"], ["num_employees", 7], ["market_id", 32], ["created_at", "2016-10-04 23:49:12.760496"], ["updated_at", "2016-10-04 23:49:12.760496"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 157], ["name", "Schamberger Inc"], ["num_employees", 3], ["market_id", 32], ["created_at", "2016-10-04 23:49:12.762452"], ["updated_at", "2016-10-04 23:49:12.762452"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 158], ["name", "Terry-Moen"], ["num_employees", 8], ["market_id", 32], ["created_at", "2016-10-04 23:49:12.764293"], ["updated_at", "2016-10-04 23:49:12.764293"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 159], ["name", "Kutch Group"], ["num_employees", 10], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.766083"], ["updated_at", "2016-10-04 23:49:12.766083"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 160], ["name", "Upton-Larkin"], ["num_employees", 2], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.768323"], ["updated_at", "2016-10-04 23:49:12.768323"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 161], ["name", "Wintheiser Group"], ["num_employees", 10], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.770264"], ["updated_at", "2016-10-04 23:49:12.770264"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 162], ["name", "Eichmann-Rodriguez"], ["num_employees", 6], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.772024"], ["updated_at", "2016-10-04 23:49:12.772024"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 163], ["name", "Grady Group"], ["num_employees", 5], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.773793"], ["updated_at", "2016-10-04 23:49:12.773793"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 164], ["name", "Gulgowski-Dietrich"], ["num_employees", 6], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.775583"], ["updated_at", "2016-10-04 23:49:12.775583"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 165], ["name", "Nikolaus Inc"], ["num_employees", 9], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.777920"], ["updated_at", "2016-10-04 23:49:12.777920"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 166], ["name", "Koch, Purdy and Hamill"], ["num_employees", 7], ["market_id", 33], ["created_at", "2016-10-04 23:49:12.780816"], ["updated_at", "2016-10-04 23:49:12.780816"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 167], ["name", "Weissnat LLC"], ["num_employees", 3], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.782764"], ["updated_at", "2016-10-04 23:49:12.782764"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 168], ["name", "Funk, Medhurst and Abshire"], ["num_employees", 10], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.784577"], ["updated_at", "2016-10-04 23:49:12.784577"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 169], ["name", "Abernathy-Towne"], ["num_employees", 11], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.786720"], ["updated_at", "2016-10-04 23:49:12.786720"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 170], ["name", "Hilpert Inc"], ["num_employees", 3], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.789116"], ["updated_at", "2016-10-04 23:49:12.789116"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 171], ["name", "Bartell-Bartoletti"], ["num_employees", 6], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.791146"], ["updated_at", "2016-10-04 23:49:12.791146"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 172], ["name", "Osinski Inc"], ["num_employees", 10], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.793287"], ["updated_at", "2016-10-04 23:49:12.793287"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 173], ["name", "Kuhn-Roob"], ["num_employees", 7], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.795405"], ["updated_at", "2016-10-04 23:49:12.795405"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 174], ["name", "Osinski, Ryan and Johnston"], ["num_employees", 4], ["market_id", 34], ["created_at", "2016-10-04 23:49:12.797548"], ["updated_at", "2016-10-04 23:49:12.797548"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 175], ["name", "Douglas, Lesch and Kuphal"], ["num_employees", 1], ["market_id", 35], ["created_at", "2016-10-04 23:49:12.799720"], ["updated_at", "2016-10-04 23:49:12.799720"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 176], ["name", "Osinski-Volkman"], ["num_employees", 10], ["market_id", 36], ["created_at", "2016-10-04 23:49:12.801470"], ["updated_at", "2016-10-04 23:49:12.801470"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 177], ["name", "Legros, Hamill and Haag"], ["num_employees", 10], ["market_id", 36], ["created_at", "2016-10-04 23:49:12.803384"], ["updated_at", "2016-10-04 23:49:12.803384"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 178], ["name", "Von-Bartoletti"], ["num_employees", 3], ["market_id", 36], ["created_at", "2016-10-04 23:49:12.805594"], ["updated_at", "2016-10-04 23:49:12.805594"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 179], ["name", "McKenzie and Sons"], ["num_employees", 2], ["market_id", 36], ["created_at", "2016-10-04 23:49:12.807724"], ["updated_at", "2016-10-04 23:49:12.807724"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 180], ["name", "Sipes Group"], ["num_employees", 4], ["market_id", 37], ["created_at", "2016-10-04 23:49:12.809719"], ["updated_at", "2016-10-04 23:49:12.809719"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 181], ["name", "Rath-Muller"], ["num_employees", 2], ["market_id", 38], ["created_at", "2016-10-04 23:49:12.811850"], ["updated_at", "2016-10-04 23:49:12.811850"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 182], ["name", "Larson Inc"], ["num_employees", 8], ["market_id", 38], ["created_at", "2016-10-04 23:49:12.814283"], ["updated_at", "2016-10-04 23:49:12.814283"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 183], ["name", "Miller-Davis"], ["num_employees", 6], ["market_id", 38], ["created_at", "2016-10-04 23:49:12.816790"], ["updated_at", "2016-10-04 23:49:12.816790"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 184], ["name", "Pollich-Towne"], ["num_employees", 6], ["market_id", 39], ["created_at", "2016-10-04 23:49:12.818868"], ["updated_at", "2016-10-04 23:49:12.818868"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 185], ["name", "Miller Group"], ["num_employees", 10], ["market_id", 39], ["created_at", "2016-10-04 23:49:12.820925"], ["updated_at", "2016-10-04 23:49:12.820925"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 186], ["name", "Kerluke LLC"], ["num_employees", 6], ["market_id", 39], ["created_at", "2016-10-04 23:49:12.822814"], ["updated_at", "2016-10-04 23:49:12.822814"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 187], ["name", "Kreiger-Crona"], ["num_employees", 8], ["market_id", 40], ["created_at", "2016-10-04 23:49:12.824714"], ["updated_at", "2016-10-04 23:49:12.824714"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 188], ["name", "Gerlach-Hodkiewicz"], ["num_employees", 10], ["market_id", 40], ["created_at", "2016-10-04 23:49:12.826577"], ["updated_at", "2016-10-04 23:49:12.826577"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 189], ["name", "Tremblay, Rosenbaum and Gleason"], ["num_employees", 3], ["market_id", 40], ["created_at", "2016-10-04 23:49:12.828575"], ["updated_at", "2016-10-04 23:49:12.828575"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 190], ["name", "Jaskolski, Borer and Hyatt"], ["num_employees", 2], ["market_id", 40], ["created_at", "2016-10-04 23:49:12.830641"], ["updated_at", "2016-10-04 23:49:12.830641"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 191], ["name", "Bailey, Konopelski and Jerde"], ["num_employees", 4], ["market_id", 41], ["created_at", "2016-10-04 23:49:12.832587"], ["updated_at", "2016-10-04 23:49:12.832587"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 192], ["name", "Jast, D'Amore and Collier"], ["num_employees", 5], ["market_id", 41], ["created_at", "2016-10-04 23:49:12.835170"], ["updated_at", "2016-10-04 23:49:12.835170"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 193], ["name", "Rolfson-Vandervort"], ["num_employees", 2], ["market_id", 41], ["created_at", "2016-10-04 23:49:12.837649"], ["updated_at", "2016-10-04 23:49:12.837649"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 194], ["name", "Mertz Group"], ["num_employees", 2], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.839619"], ["updated_at", "2016-10-04 23:49:12.839619"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 195], ["name", "Towne Group"], ["num_employees", 8], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.841384"], ["updated_at", "2016-10-04 23:49:12.841384"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 196], ["name", "Kemmer Group"], ["num_employees", 8], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.843703"], ["updated_at", "2016-10-04 23:49:12.843703"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 197], ["name", "Bode, Gleason and Zieme"], ["num_employees", 4], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.845831"], ["updated_at", "2016-10-04 23:49:12.845831"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 198], ["name", "O'Conner Inc"], ["num_employees", 1], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.847835"], ["updated_at", "2016-10-04 23:49:12.847835"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 199], ["name", "Grant-Robel"], ["num_employees", 5], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.849720"], ["updated_at", "2016-10-04 23:49:12.849720"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 200], ["name", "Frami and Sons"], ["num_employees", 5], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.852205"], ["updated_at", "2016-10-04 23:49:12.852205"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 201], ["name", "Gleason Group"], ["num_employees", 7], ["market_id", 42], ["created_at", "2016-10-04 23:49:12.854914"], ["updated_at", "2016-10-04 23:49:12.854914"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 202], ["name", "Abshire, Orn and Torp"], ["num_employees", 1], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.856987"], ["updated_at", "2016-10-04 23:49:12.856987"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 203], ["name", "Osinski-Schuster"], ["num_employees", 7], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.858831"], ["updated_at", "2016-10-04 23:49:12.858831"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 204], ["name", "Green, Goodwin and Kiehn"], ["num_employees", 1], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.860705"], ["updated_at", "2016-10-04 23:49:12.860705"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 205], ["name", "Torp Group"], ["num_employees", 11], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.863246"], ["updated_at", "2016-10-04 23:49:12.863246"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 206], ["name", "Labadie and Sons"], ["num_employees", 6], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.866149"], ["updated_at", "2016-10-04 23:49:12.866149"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 207], ["name", "Renner Inc"], ["num_employees", 1], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.868881"], ["updated_at", "2016-10-04 23:49:12.868881"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 208], ["name", "Hills-Swaniawski"], ["num_employees", 9], ["market_id", 43], ["created_at", "2016-10-04 23:49:12.871638"], ["updated_at", "2016-10-04 23:49:12.871638"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 209], ["name", "Rempel Group"], ["num_employees", 3], ["market_id", 44], ["created_at", "2016-10-04 23:49:12.873879"], ["updated_at", "2016-10-04 23:49:12.873879"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 210], ["name", "Gerlach, Gaylord and Strosin"], ["num_employees", 3], ["market_id", 44], ["created_at", "2016-10-04 23:49:12.876212"], ["updated_at", "2016-10-04 23:49:12.876212"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 211], ["name", "Larkin-Friesen"], ["num_employees", 6], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.878194"], ["updated_at", "2016-10-04 23:49:12.878194"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 212], ["name", "Stanton, Emard and Metz"], ["num_employees", 11], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.880211"], ["updated_at", "2016-10-04 23:49:12.880211"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 213], ["name", "Schaden-Jones"], ["num_employees", 4], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.882138"], ["updated_at", "2016-10-04 23:49:12.882138"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 214], ["name", "Goodwin, Sanford and Weber"], ["num_employees", 10], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.884367"], ["updated_at", "2016-10-04 23:49:12.884367"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 215], ["name", "Marquardt, Eichmann and Lang"], ["num_employees", 7], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.887038"], ["updated_at", "2016-10-04 23:49:12.887038"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 216], ["name", "Wintheiser and Sons"], ["num_employees", 10], ["market_id", 45], ["created_at", "2016-10-04 23:49:12.889903"], ["updated_at", "2016-10-04 23:49:12.889903"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 217], ["name", "Anderson, Reynolds and Bode"], ["num_employees", 1], ["market_id", 46], ["created_at", "2016-10-04 23:49:12.892082"], ["updated_at", "2016-10-04 23:49:12.892082"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 218], ["name", "Powlowski-Kemmer"], ["num_employees", 10], ["market_id", 46], ["created_at", "2016-10-04 23:49:12.894244"], ["updated_at", "2016-10-04 23:49:12.894244"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 219], ["name", "Klein Group"], ["num_employees", 5], ["market_id", 47], ["created_at", "2016-10-04 23:49:12.896261"], ["updated_at", "2016-10-04 23:49:12.896261"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 220], ["name", "Keeling, Abernathy and DuBuque"], ["num_employees", 1], ["market_id", 47], ["created_at", "2016-10-04 23:49:12.898593"], ["updated_at", "2016-10-04 23:49:12.898593"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 221], ["name", "Buckridge-Schmitt"], ["num_employees", 4], ["market_id", 47], ["created_at", "2016-10-04 23:49:12.901189"], ["updated_at", "2016-10-04 23:49:12.901189"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 222], ["name", "Kutch, Satterfield and Jacobson"], ["num_employees", 7], ["market_id", 47], ["created_at", "2016-10-04 23:49:12.903985"], ["updated_at", "2016-10-04 23:49:12.903985"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 223], ["name", "Champlin, Halvorson and Medhurst"], ["num_employees", 7], ["market_id", 47], ["created_at", "2016-10-04 23:49:12.906123"], ["updated_at", "2016-10-04 23:49:12.906123"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 224], ["name", "Aufderhar-Paucek"], ["num_employees", 9], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.908116"], ["updated_at", "2016-10-04 23:49:12.908116"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 225], ["name", "Zulauf Group"], ["num_employees", 3], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.910132"], ["updated_at", "2016-10-04 23:49:12.910132"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 226], ["name", "Hyatt-Robel"], ["num_employees", 5], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.912125"], ["updated_at", "2016-10-04 23:49:12.912125"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 227], ["name", "Lowe-Willms"], ["num_employees", 5], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.914014"], ["updated_at", "2016-10-04 23:49:12.914014"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 228], ["name", "Mills-Beier"], ["num_employees", 11], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.915821"], ["updated_at", "2016-10-04 23:49:12.915821"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 229], ["name", "Marvin LLC"], ["num_employees", 4], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.918663"], ["updated_at", "2016-10-04 23:49:12.918663"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 230], ["name", "Torp-DuBuque"], ["num_employees", 1], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.921277"], ["updated_at", "2016-10-04 23:49:12.921277"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 231], ["name", "Skiles Group"], ["num_employees", 7], ["market_id", 48], ["created_at", "2016-10-04 23:49:12.923246"], ["updated_at", "2016-10-04 23:49:12.923246"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 232], ["name", "Howe-Mertz"], ["num_employees", 7], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.925033"], ["updated_at", "2016-10-04 23:49:12.925033"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 233], ["name", "Lubowitz Group"], ["num_employees", 3], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.927484"], ["updated_at", "2016-10-04 23:49:12.927484"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 234], ["name", "Kuhlman and Sons"], ["num_employees", 2], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.930233"], ["updated_at", "2016-10-04 23:49:12.930233"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 235], ["name", "Renner Inc"], ["num_employees", 2], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.933530"], ["updated_at", "2016-10-04 23:49:12.933530"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 236], ["name", "Grimes Inc"], ["num_employees", 11], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.936165"], ["updated_at", "2016-10-04 23:49:12.936165"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 237], ["name", "Ritchie LLC"], ["num_employees", 10], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.938023"], ["updated_at", "2016-10-04 23:49:12.938023"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 238], ["name", "Wuckert LLC"], ["num_employees", 2], ["market_id", 49], ["created_at", "2016-10-04 23:49:12.939894"], ["updated_at", "2016-10-04 23:49:12.939894"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 239], ["name", "Windler Inc"], ["num_employees", 6], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.942480"], ["updated_at", "2016-10-04 23:49:12.942480"]]
+  [1m[35m (1.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 240], ["name", "Roberts LLC"], ["num_employees", 9], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.945254"], ["updated_at", "2016-10-04 23:49:12.945254"]]
+  [1m[36m (12.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 241], ["name", "Greenfelder Inc"], ["num_employees", 4], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.959739"], ["updated_at", "2016-10-04 23:49:12.959739"]]
+  [1m[35m (0.9ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 242], ["name", "Stanton and Sons"], ["num_employees", 6], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.962340"], ["updated_at", "2016-10-04 23:49:12.962340"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 243], ["name", "Thompson, Stracke and Connelly"], ["num_employees", 2], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.964297"], ["updated_at", "2016-10-04 23:49:12.964297"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 244], ["name", "Ziemann-Emmerich"], ["num_employees", 2], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.966477"], ["updated_at", "2016-10-04 23:49:12.966477"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 245], ["name", "Dach LLC"], ["num_employees", 6], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.968713"], ["updated_at", "2016-10-04 23:49:12.968713"]]
+  [1m[35m (3.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 246], ["name", "Gibson-Von"], ["num_employees", 10], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.974154"], ["updated_at", "2016-10-04 23:49:12.974154"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 247], ["name", "Ward, Hirthe and Johns"], ["num_employees", 8], ["market_id", 50], ["created_at", "2016-10-04 23:49:12.976100"], ["updated_at", "2016-10-04 23:49:12.976100"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 248], ["name", "Daniel-Gusikowski"], ["num_employees", 5], ["market_id", 51], ["created_at", "2016-10-04 23:49:12.977965"], ["updated_at", "2016-10-04 23:49:12.977965"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 249], ["name", "Rice, Bartell and Shields"], ["num_employees", 8], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.979971"], ["updated_at", "2016-10-04 23:49:12.979971"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 250], ["name", "Konopelski, Block and Krajcik"], ["num_employees", 9], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.982180"], ["updated_at", "2016-10-04 23:49:12.982180"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 251], ["name", "Hauck-Hammes"], ["num_employees", 7], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.984629"], ["updated_at", "2016-10-04 23:49:12.984629"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 252], ["name", "Johns, Pouros and Pouros"], ["num_employees", 11], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.986859"], ["updated_at", "2016-10-04 23:49:12.986859"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 253], ["name", "Kling, Rempel and Gerhold"], ["num_employees", 2], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.988767"], ["updated_at", "2016-10-04 23:49:12.988767"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 254], ["name", "Beer-Skiles"], ["num_employees", 8], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.990677"], ["updated_at", "2016-10-04 23:49:12.990677"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 255], ["name", "Veum, Padberg and Berge"], ["num_employees", 2], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.992709"], ["updated_at", "2016-10-04 23:49:12.992709"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 256], ["name", "Waters, Daugherty and Walter"], ["num_employees", 3], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.994642"], ["updated_at", "2016-10-04 23:49:12.994642"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 257], ["name", "Heathcote Group"], ["num_employees", 2], ["market_id", 52], ["created_at", "2016-10-04 23:49:12.996515"], ["updated_at", "2016-10-04 23:49:12.996515"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 258], ["name", "Strosin Group"], ["num_employees", 8], ["market_id", 53], ["created_at", "2016-10-04 23:49:12.998658"], ["updated_at", "2016-10-04 23:49:12.998658"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 259], ["name", "Marks Group"], ["num_employees", 7], ["market_id", 53], ["created_at", "2016-10-04 23:49:13.000989"], ["updated_at", "2016-10-04 23:49:13.000989"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 260], ["name", "Fay-Gerhold"], ["num_employees", 3], ["market_id", 53], ["created_at", "2016-10-04 23:49:13.003353"], ["updated_at", "2016-10-04 23:49:13.003353"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 261], ["name", "Gusikowski and Sons"], ["num_employees", 8], ["market_id", 53], ["created_at", "2016-10-04 23:49:13.005231"], ["updated_at", "2016-10-04 23:49:13.005231"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 262], ["name", "Steuber, Larkin and Beer"], ["num_employees", 3], ["market_id", 53], ["created_at", "2016-10-04 23:49:13.007079"], ["updated_at", "2016-10-04 23:49:13.007079"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 263], ["name", "Leffler-Bernier"], ["num_employees", 3], ["market_id", 53], ["created_at", "2016-10-04 23:49:13.008994"], ["updated_at", "2016-10-04 23:49:13.008994"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 264], ["name", "Friesen-Schultz"], ["num_employees", 11], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.011112"], ["updated_at", "2016-10-04 23:49:13.011112"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 265], ["name", "Haley, Padberg and Rosenbaum"], ["num_employees", 7], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.013639"], ["updated_at", "2016-10-04 23:49:13.013639"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 266], ["name", "Klocko, Von and Cassin"], ["num_employees", 1], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.016750"], ["updated_at", "2016-10-04 23:49:13.016750"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 267], ["name", "Senger-Gleichner"], ["num_employees", 3], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.019393"], ["updated_at", "2016-10-04 23:49:13.019393"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 268], ["name", "Goodwin-Lueilwitz"], ["num_employees", 1], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.021376"], ["updated_at", "2016-10-04 23:49:13.021376"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 269], ["name", "Streich, Roob and Pfeffer"], ["num_employees", 4], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.023277"], ["updated_at", "2016-10-04 23:49:13.023277"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 270], ["name", "Denesik and Sons"], ["num_employees", 10], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.025003"], ["updated_at", "2016-10-04 23:49:13.025003"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 271], ["name", "Douglas LLC"], ["num_employees", 1], ["market_id", 55], ["created_at", "2016-10-04 23:49:13.027243"], ["updated_at", "2016-10-04 23:49:13.027243"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 272], ["name", "Durgan, West and Muller"], ["num_employees", 7], ["market_id", 55], ["created_at", "2016-10-04 23:49:13.029268"], ["updated_at", "2016-10-04 23:49:13.029268"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 273], ["name", "Stamm and Sons"], ["num_employees", 11], ["market_id", 55], ["created_at", "2016-10-04 23:49:13.031156"], ["updated_at", "2016-10-04 23:49:13.031156"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 274], ["name", "Reilly-Bernhard"], ["num_employees", 11], ["market_id", 55], ["created_at", "2016-10-04 23:49:13.032921"], ["updated_at", "2016-10-04 23:49:13.032921"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 275], ["name", "Mayer, O'Kon and Cummerata"], ["num_employees", 2], ["market_id", 55], ["created_at", "2016-10-04 23:49:13.034697"], ["updated_at", "2016-10-04 23:49:13.034697"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 276], ["name", "Zulauf and Sons"], ["num_employees", 4], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.036875"], ["updated_at", "2016-10-04 23:49:13.036875"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 277], ["name", "Swaniawski, Donnelly and Watsica"], ["num_employees", 7], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.038866"], ["updated_at", "2016-10-04 23:49:13.038866"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 278], ["name", "O'Keefe Group"], ["num_employees", 2], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.040718"], ["updated_at", "2016-10-04 23:49:13.040718"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 279], ["name", "Mante, Will and Lindgren"], ["num_employees", 3], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.042471"], ["updated_at", "2016-10-04 23:49:13.042471"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 280], ["name", "Kuhlman-Spencer"], ["num_employees", 10], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.044522"], ["updated_at", "2016-10-04 23:49:13.044522"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 281], ["name", "Rippin-Nader"], ["num_employees", 3], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.047093"], ["updated_at", "2016-10-04 23:49:13.047093"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 282], ["name", "Mosciski-Casper"], ["num_employees", 4], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.049143"], ["updated_at", "2016-10-04 23:49:13.049143"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 283], ["name", "Abbott Group"], ["num_employees", 9], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.050962"], ["updated_at", "2016-10-04 23:49:13.050962"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 284], ["name", "Wuckert-Weimann"], ["num_employees", 9], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.052714"], ["updated_at", "2016-10-04 23:49:13.052714"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 285], ["name", "Durgan, D'Amore and Hilpert"], ["num_employees", 9], ["market_id", 56], ["created_at", "2016-10-04 23:49:13.054789"], ["updated_at", "2016-10-04 23:49:13.054789"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 286], ["name", "Hettinger Inc"], ["num_employees", 8], ["market_id", 57], ["created_at", "2016-10-04 23:49:13.056644"], ["updated_at", "2016-10-04 23:49:13.056644"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 287], ["name", "Williamson LLC"], ["num_employees", 10], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.058731"], ["updated_at", "2016-10-04 23:49:13.058731"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 288], ["name", "Kuphal-Connelly"], ["num_employees", 1], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.060584"], ["updated_at", "2016-10-04 23:49:13.060584"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 289], ["name", "Cremin, Beahan and Lind"], ["num_employees", 5], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.062445"], ["updated_at", "2016-10-04 23:49:13.062445"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 290], ["name", "Heaney, Christiansen and Heaney"], ["num_employees", 9], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.064174"], ["updated_at", "2016-10-04 23:49:13.064174"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 291], ["name", "Swift and Sons"], ["num_employees", 6], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.065978"], ["updated_at", "2016-10-04 23:49:13.065978"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 292], ["name", "Koelpin, Doyle and Wuckert"], ["num_employees", 3], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.068345"], ["updated_at", "2016-10-04 23:49:13.068345"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 293], ["name", "Hane and Sons"], ["num_employees", 10], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.070724"], ["updated_at", "2016-10-04 23:49:13.070724"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 294], ["name", "Volkman-Kuphal"], ["num_employees", 6], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.073239"], ["updated_at", "2016-10-04 23:49:13.073239"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 295], ["name", "Price-Larson"], ["num_employees", 1], ["market_id", 58], ["created_at", "2016-10-04 23:49:13.075248"], ["updated_at", "2016-10-04 23:49:13.075248"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 296], ["name", "Toy, Lueilwitz and Maggio"], ["num_employees", 10], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.077450"], ["updated_at", "2016-10-04 23:49:13.077450"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 297], ["name", "Kuvalis, Zemlak and Kunde"], ["num_employees", 7], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.080188"], ["updated_at", "2016-10-04 23:49:13.080188"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 298], ["name", "O'Hara, Beer and Larkin"], ["num_employees", 5], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.082255"], ["updated_at", "2016-10-04 23:49:13.082255"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 299], ["name", "Marks-Stroman"], ["num_employees", 4], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.084204"], ["updated_at", "2016-10-04 23:49:13.084204"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 300], ["name", "Hammes-Borer"], ["num_employees", 7], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.086038"], ["updated_at", "2016-10-04 23:49:13.086038"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 301], ["name", "Green Inc"], ["num_employees", 8], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.087898"], ["updated_at", "2016-10-04 23:49:13.087898"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 302], ["name", "Denesik, Dach and Stamm"], ["num_employees", 4], ["market_id", 59], ["created_at", "2016-10-04 23:49:13.089622"], ["updated_at", "2016-10-04 23:49:13.089622"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 303], ["name", "Kirlin, Hickle and Murray"], ["num_employees", 8], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.091590"], ["updated_at", "2016-10-04 23:49:13.091590"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 304], ["name", "Rath Group"], ["num_employees", 11], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.093617"], ["updated_at", "2016-10-04 23:49:13.093617"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 305], ["name", "Paucek-McCullough"], ["num_employees", 6], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.095583"], ["updated_at", "2016-10-04 23:49:13.095583"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 306], ["name", "Funk, Bayer and Walter"], ["num_employees", 4], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.097343"], ["updated_at", "2016-10-04 23:49:13.097343"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 307], ["name", "Rogahn-Mosciski"], ["num_employees", 10], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.099159"], ["updated_at", "2016-10-04 23:49:13.099159"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 308], ["name", "Fritsch-Cummings"], ["num_employees", 7], ["market_id", 60], ["created_at", "2016-10-04 23:49:13.100945"], ["updated_at", "2016-10-04 23:49:13.100945"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 309], ["name", "Nolan, Rolfson and Hoeger"], ["num_employees", 8], ["market_id", 61], ["created_at", "2016-10-04 23:49:13.103003"], ["updated_at", "2016-10-04 23:49:13.103003"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 310], ["name", "Pfeffer LLC"], ["num_employees", 5], ["market_id", 61], ["created_at", "2016-10-04 23:49:13.104880"], ["updated_at", "2016-10-04 23:49:13.104880"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 311], ["name", "Gleichner LLC"], ["num_employees", 1], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.106812"], ["updated_at", "2016-10-04 23:49:13.106812"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 312], ["name", "Sporer Inc"], ["num_employees", 5], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.108616"], ["updated_at", "2016-10-04 23:49:13.108616"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 313], ["name", "Stiedemann-Hamill"], ["num_employees", 1], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.110669"], ["updated_at", "2016-10-04 23:49:13.110669"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 314], ["name", "Sawayn-Bednar"], ["num_employees", 3], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.112648"], ["updated_at", "2016-10-04 23:49:13.112648"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 315], ["name", "Lesch, Emard and Schroeder"], ["num_employees", 11], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.114648"], ["updated_at", "2016-10-04 23:49:13.114648"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 316], ["name", "Koelpin LLC"], ["num_employees", 7], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.116647"], ["updated_at", "2016-10-04 23:49:13.116647"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 317], ["name", "Metz Group"], ["num_employees", 8], ["market_id", 62], ["created_at", "2016-10-04 23:49:13.118492"], ["updated_at", "2016-10-04 23:49:13.118492"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 318], ["name", "Johns and Sons"], ["num_employees", 3], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.120276"], ["updated_at", "2016-10-04 23:49:13.120276"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 319], ["name", "Price Group"], ["num_employees", 3], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.122084"], ["updated_at", "2016-10-04 23:49:13.122084"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 320], ["name", "Krajcik and Sons"], ["num_employees", 8], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.124202"], ["updated_at", "2016-10-04 23:49:13.124202"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 321], ["name", "Schaefer, Hudson and Bosco"], ["num_employees", 10], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.126155"], ["updated_at", "2016-10-04 23:49:13.126155"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 322], ["name", "Nienow Group"], ["num_employees", 5], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.128028"], ["updated_at", "2016-10-04 23:49:13.128028"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 323], ["name", "Denesik Inc"], ["num_employees", 5], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.129853"], ["updated_at", "2016-10-04 23:49:13.129853"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 324], ["name", "Hammes, Streich and Hoeger"], ["num_employees", 2], ["market_id", 63], ["created_at", "2016-10-04 23:49:13.131748"], ["updated_at", "2016-10-04 23:49:13.131748"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 325], ["name", "Leuschke-Kerluke"], ["num_employees", 10], ["market_id", 64], ["created_at", "2016-10-04 23:49:13.133606"], ["updated_at", "2016-10-04 23:49:13.133606"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 326], ["name", "Koch, Sawayn and Moen"], ["num_employees", 7], ["market_id", 65], ["created_at", "2016-10-04 23:49:13.135647"], ["updated_at", "2016-10-04 23:49:13.135647"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 327], ["name", "Harris and Sons"], ["num_employees", 1], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.137544"], ["updated_at", "2016-10-04 23:49:13.137544"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 328], ["name", "Sawayn, Abernathy and Donnelly"], ["num_employees", 2], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.139284"], ["updated_at", "2016-10-04 23:49:13.139284"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 329], ["name", "Hegmann-Jacobs"], ["num_employees", 8], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.141091"], ["updated_at", "2016-10-04 23:49:13.141091"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 330], ["name", "Terry-Bergnaum"], ["num_employees", 9], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.142895"], ["updated_at", "2016-10-04 23:49:13.142895"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 331], ["name", "Rempel, Tromp and Lebsack"], ["num_employees", 9], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.144705"], ["updated_at", "2016-10-04 23:49:13.144705"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 332], ["name", "Grady-Walker"], ["num_employees", 9], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.146668"], ["updated_at", "2016-10-04 23:49:13.146668"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 333], ["name", "Strosin and Sons"], ["num_employees", 2], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.148586"], ["updated_at", "2016-10-04 23:49:13.148586"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 334], ["name", "Collier Group"], ["num_employees", 9], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.150809"], ["updated_at", "2016-10-04 23:49:13.150809"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 335], ["name", "Von, Turner and Cummings"], ["num_employees", 5], ["market_id", 66], ["created_at", "2016-10-04 23:49:13.153139"], ["updated_at", "2016-10-04 23:49:13.153139"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 336], ["name", "Borer Group"], ["num_employees", 7], ["market_id", 67], ["created_at", "2016-10-04 23:49:13.155273"], ["updated_at", "2016-10-04 23:49:13.155273"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 337], ["name", "Fahey-Littel"], ["num_employees", 2], ["market_id", 67], ["created_at", "2016-10-04 23:49:13.157174"], ["updated_at", "2016-10-04 23:49:13.157174"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 338], ["name", "Harber, Spinka and Larkin"], ["num_employees", 9], ["market_id", 67], ["created_at", "2016-10-04 23:49:13.159201"], ["updated_at", "2016-10-04 23:49:13.159201"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 339], ["name", "Schmeler Inc"], ["num_employees", 10], ["market_id", 67], ["created_at", "2016-10-04 23:49:13.161459"], ["updated_at", "2016-10-04 23:49:13.161459"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 340], ["name", "Goldner-Gerhold"], ["num_employees", 1], ["market_id", 67], ["created_at", "2016-10-04 23:49:13.164044"], ["updated_at", "2016-10-04 23:49:13.164044"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 341], ["name", "Connelly, Hilll and Wolf"], ["num_employees", 2], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.166075"], ["updated_at", "2016-10-04 23:49:13.166075"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 342], ["name", "Abbott, Volkman and Bins"], ["num_employees", 2], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.167942"], ["updated_at", "2016-10-04 23:49:13.167942"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 343], ["name", "Witting, Collier and Feil"], ["num_employees", 4], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.170002"], ["updated_at", "2016-10-04 23:49:13.170002"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 344], ["name", "Corkery and Sons"], ["num_employees", 8], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.171886"], ["updated_at", "2016-10-04 23:49:13.171886"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 345], ["name", "O'Hara LLC"], ["num_employees", 6], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.173667"], ["updated_at", "2016-10-04 23:49:13.173667"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 346], ["name", "Grady-Jakubowski"], ["num_employees", 2], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.175507"], ["updated_at", "2016-10-04 23:49:13.175507"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 347], ["name", "Becker, Hane and Conn"], ["num_employees", 10], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.177382"], ["updated_at", "2016-10-04 23:49:13.177382"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 348], ["name", "Schaefer-Lehner"], ["num_employees", 11], ["market_id", 68], ["created_at", "2016-10-04 23:49:13.179517"], ["updated_at", "2016-10-04 23:49:13.179517"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 349], ["name", "Schaden Group"], ["num_employees", 10], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.181418"], ["updated_at", "2016-10-04 23:49:13.181418"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 350], ["name", "Kirlin, Dickens and Von"], ["num_employees", 11], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.183218"], ["updated_at", "2016-10-04 23:49:13.183218"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 351], ["name", "Schmeler and Sons"], ["num_employees", 3], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.184978"], ["updated_at", "2016-10-04 23:49:13.184978"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 352], ["name", "Pagac, Langosh and Bogan"], ["num_employees", 2], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.186788"], ["updated_at", "2016-10-04 23:49:13.186788"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 353], ["name", "Bernier-Schoen"], ["num_employees", 9], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.188858"], ["updated_at", "2016-10-04 23:49:13.188858"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 354], ["name", "Auer, Senger and Legros"], ["num_employees", 9], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.190708"], ["updated_at", "2016-10-04 23:49:13.190708"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 355], ["name", "Schaefer Inc"], ["num_employees", 11], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.192443"], ["updated_at", "2016-10-04 23:49:13.192443"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 356], ["name", "Ruecker and Sons"], ["num_employees", 2], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.194407"], ["updated_at", "2016-10-04 23:49:13.194407"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 357], ["name", "Bins-Dickens"], ["num_employees", 10], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.196472"], ["updated_at", "2016-10-04 23:49:13.196472"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 358], ["name", "Cronin-Feeney"], ["num_employees", 9], ["market_id", 69], ["created_at", "2016-10-04 23:49:13.198300"], ["updated_at", "2016-10-04 23:49:13.198300"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 359], ["name", "Crooks, Cruickshank and Keeling"], ["num_employees", 6], ["market_id", 70], ["created_at", "2016-10-04 23:49:13.200436"], ["updated_at", "2016-10-04 23:49:13.200436"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 360], ["name", "Hackett Inc"], ["num_employees", 6], ["market_id", 70], ["created_at", "2016-10-04 23:49:13.202345"], ["updated_at", "2016-10-04 23:49:13.202345"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 361], ["name", "Gerlach-Kunde"], ["num_employees", 10], ["market_id", 70], ["created_at", "2016-10-04 23:49:13.204127"], ["updated_at", "2016-10-04 23:49:13.204127"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 362], ["name", "Fritsch-Hamill"], ["num_employees", 3], ["market_id", 70], ["created_at", "2016-10-04 23:49:13.205845"], ["updated_at", "2016-10-04 23:49:13.205845"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 363], ["name", "Grimes Group"], ["num_employees", 4], ["market_id", 70], ["created_at", "2016-10-04 23:49:13.207582"], ["updated_at", "2016-10-04 23:49:13.207582"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 364], ["name", "White-Steuber"], ["num_employees", 3], ["market_id", 71], ["created_at", "2016-10-04 23:49:13.209549"], ["updated_at", "2016-10-04 23:49:13.209549"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 365], ["name", "Toy, Krajcik and Bashirian"], ["num_employees", 7], ["market_id", 71], ["created_at", "2016-10-04 23:49:13.211506"], ["updated_at", "2016-10-04 23:49:13.211506"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 366], ["name", "Upton and Sons"], ["num_employees", 2], ["market_id", 71], ["created_at", "2016-10-04 23:49:13.213450"], ["updated_at", "2016-10-04 23:49:13.213450"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 367], ["name", "Weimann and Sons"], ["num_employees", 11], ["market_id", 71], ["created_at", "2016-10-04 23:49:13.215227"], ["updated_at", "2016-10-04 23:49:13.215227"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 368], ["name", "Champlin, Romaguera and Yost"], ["num_employees", 2], ["market_id", 72], ["created_at", "2016-10-04 23:49:13.217024"], ["updated_at", "2016-10-04 23:49:13.217024"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 369], ["name", "Herman and Sons"], ["num_employees", 9], ["market_id", 72], ["created_at", "2016-10-04 23:49:13.219087"], ["updated_at", "2016-10-04 23:49:13.219087"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 370], ["name", "Reichert, Stracke and Block"], ["num_employees", 1], ["market_id", 72], ["created_at", "2016-10-04 23:49:13.221556"], ["updated_at", "2016-10-04 23:49:13.221556"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 371], ["name", "Balistreri, Smith and Sawayn"], ["num_employees", 8], ["market_id", 72], ["created_at", "2016-10-04 23:49:13.223713"], ["updated_at", "2016-10-04 23:49:13.223713"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 372], ["name", "Hettinger Inc"], ["num_employees", 3], ["market_id", 72], ["created_at", "2016-10-04 23:49:13.225730"], ["updated_at", "2016-10-04 23:49:13.225730"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 373], ["name", "Howe LLC"], ["num_employees", 8], ["market_id", 73], ["created_at", "2016-10-04 23:49:13.227770"], ["updated_at", "2016-10-04 23:49:13.227770"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 374], ["name", "Oberbrunner-Feest"], ["num_employees", 4], ["market_id", 74], ["created_at", "2016-10-04 23:49:13.229713"], ["updated_at", "2016-10-04 23:49:13.229713"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 375], ["name", "Haley-Ortiz"], ["num_employees", 1], ["market_id", 75], ["created_at", "2016-10-04 23:49:13.231653"], ["updated_at", "2016-10-04 23:49:13.231653"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 376], ["name", "Kuhic LLC"], ["num_employees", 11], ["market_id", 75], ["created_at", "2016-10-04 23:49:13.234473"], ["updated_at", "2016-10-04 23:49:13.234473"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 377], ["name", "Considine-Hauck"], ["num_employees", 8], ["market_id", 75], ["created_at", "2016-10-04 23:49:13.236454"], ["updated_at", "2016-10-04 23:49:13.236454"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 378], ["name", "Hintz Group"], ["num_employees", 7], ["market_id", 76], ["created_at", "2016-10-04 23:49:13.238286"], ["updated_at", "2016-10-04 23:49:13.238286"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 379], ["name", "Torphy, Hyatt and Greenholt"], ["num_employees", 1], ["market_id", 77], ["created_at", "2016-10-04 23:49:13.240118"], ["updated_at", "2016-10-04 23:49:13.240118"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 380], ["name", "Luettgen-Feest"], ["num_employees", 5], ["market_id", 77], ["created_at", "2016-10-04 23:49:13.241912"], ["updated_at", "2016-10-04 23:49:13.241912"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 381], ["name", "Christiansen and Sons"], ["num_employees", 6], ["market_id", 77], ["created_at", "2016-10-04 23:49:13.243987"], ["updated_at", "2016-10-04 23:49:13.243987"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 382], ["name", "Klocko, Yost and Wunsch"], ["num_employees", 8], ["market_id", 78], ["created_at", "2016-10-04 23:49:13.246017"], ["updated_at", "2016-10-04 23:49:13.246017"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 383], ["name", "Padberg, Block and Rodriguez"], ["num_employees", 8], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.247776"], ["updated_at", "2016-10-04 23:49:13.247776"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 384], ["name", "Davis, Gerhold and Heaney"], ["num_employees", 5], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.249549"], ["updated_at", "2016-10-04 23:49:13.249549"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 385], ["name", "DuBuque Group"], ["num_employees", 4], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.251762"], ["updated_at", "2016-10-04 23:49:13.251762"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 386], ["name", "Hintz and Sons"], ["num_employees", 11], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.254314"], ["updated_at", "2016-10-04 23:49:13.254314"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 387], ["name", "Pouros-Effertz"], ["num_employees", 9], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.256582"], ["updated_at", "2016-10-04 23:49:13.256582"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 388], ["name", "Carroll LLC"], ["num_employees", 8], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.258621"], ["updated_at", "2016-10-04 23:49:13.258621"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 389], ["name", "MacGyver-Von"], ["num_employees", 2], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.260559"], ["updated_at", "2016-10-04 23:49:13.260559"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 390], ["name", "Abernathy-Kohler"], ["num_employees", 4], ["market_id", 80], ["created_at", "2016-10-04 23:49:13.262563"], ["updated_at", "2016-10-04 23:49:13.262563"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 391], ["name", "Hauck-Marquardt"], ["num_employees", 7], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.264433"], ["updated_at", "2016-10-04 23:49:13.264433"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 392], ["name", "McGlynn, Osinski and Morissette"], ["num_employees", 10], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.266595"], ["updated_at", "2016-10-04 23:49:13.266595"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 393], ["name", "Hintz LLC"], ["num_employees", 4], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.268492"], ["updated_at", "2016-10-04 23:49:13.268492"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 394], ["name", "Stehr, Mante and Pouros"], ["num_employees", 3], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.270442"], ["updated_at", "2016-10-04 23:49:13.270442"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 395], ["name", "O'Kon Inc"], ["num_employees", 1], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.272655"], ["updated_at", "2016-10-04 23:49:13.272655"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 396], ["name", "Fay-Kris"], ["num_employees", 7], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.274922"], ["updated_at", "2016-10-04 23:49:13.274922"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 397], ["name", "Zboncak LLC"], ["num_employees", 7], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.277316"], ["updated_at", "2016-10-04 23:49:13.277316"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 398], ["name", "O'Conner-Turcotte"], ["num_employees", 8], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.279528"], ["updated_at", "2016-10-04 23:49:13.279528"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 399], ["name", "Bins and Sons"], ["num_employees", 6], ["market_id", 81], ["created_at", "2016-10-04 23:49:13.281472"], ["updated_at", "2016-10-04 23:49:13.281472"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 400], ["name", "Kutch, Parker and Sipes"], ["num_employees", 7], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.283267"], ["updated_at", "2016-10-04 23:49:13.283267"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 401], ["name", "Borer, Ernser and Spencer"], ["num_employees", 4], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.285064"], ["updated_at", "2016-10-04 23:49:13.285064"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 402], ["name", "Beatty, Cole and Dibbert"], ["num_employees", 11], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.287240"], ["updated_at", "2016-10-04 23:49:13.287240"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 403], ["name", "McDermott-Durgan"], ["num_employees", 7], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.289118"], ["updated_at", "2016-10-04 23:49:13.289118"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 404], ["name", "Kertzmann Inc"], ["num_employees", 7], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.290945"], ["updated_at", "2016-10-04 23:49:13.290945"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 405], ["name", "Dickinson-Grant"], ["num_employees", 2], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.292830"], ["updated_at", "2016-10-04 23:49:13.292830"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 406], ["name", "Cole Group"], ["num_employees", 9], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.295075"], ["updated_at", "2016-10-04 23:49:13.295075"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 407], ["name", "Dibbert-Raynor"], ["num_employees", 1], ["market_id", 82], ["created_at", "2016-10-04 23:49:13.297496"], ["updated_at", "2016-10-04 23:49:13.297496"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 408], ["name", "Quigley, Williamson and Nicolas"], ["num_employees", 7], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.299555"], ["updated_at", "2016-10-04 23:49:13.299555"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 409], ["name", "Heathcote LLC"], ["num_employees", 5], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.301520"], ["updated_at", "2016-10-04 23:49:13.301520"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 410], ["name", "Champlin-Gerhold"], ["num_employees", 10], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.303349"], ["updated_at", "2016-10-04 23:49:13.303349"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 411], ["name", "Beer, Wisoky and Boehm"], ["num_employees", 3], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.305230"], ["updated_at", "2016-10-04 23:49:13.305230"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 412], ["name", "Bernier-Torp"], ["num_employees", 3], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.307018"], ["updated_at", "2016-10-04 23:49:13.307018"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 413], ["name", "Rempel and Sons"], ["num_employees", 3], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.309112"], ["updated_at", "2016-10-04 23:49:13.309112"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 414], ["name", "Streich-Yost"], ["num_employees", 11], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.311158"], ["updated_at", "2016-10-04 23:49:13.311158"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 415], ["name", "Schroeder, Stracke and Flatley"], ["num_employees", 3], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.313136"], ["updated_at", "2016-10-04 23:49:13.313136"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 416], ["name", "Walsh, O'Connell and Schmeler"], ["num_employees", 5], ["market_id", 83], ["created_at", "2016-10-04 23:49:13.314993"], ["updated_at", "2016-10-04 23:49:13.314993"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 417], ["name", "Schumm-Bogisich"], ["num_employees", 3], ["market_id", 84], ["created_at", "2016-10-04 23:49:13.316814"], ["updated_at", "2016-10-04 23:49:13.316814"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 418], ["name", "Turcotte, Bayer and Labadie"], ["num_employees", 5], ["market_id", 84], ["created_at", "2016-10-04 23:49:13.318666"], ["updated_at", "2016-10-04 23:49:13.318666"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 419], ["name", "Sauer-Haag"], ["num_employees", 8], ["market_id", 84], ["created_at", "2016-10-04 23:49:13.322723"], ["updated_at", "2016-10-04 23:49:13.322723"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 420], ["name", "Gerhold-Boyer"], ["num_employees", 7], ["market_id", 84], ["created_at", "2016-10-04 23:49:13.324587"], ["updated_at", "2016-10-04 23:49:13.324587"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 421], ["name", "Bins, Jaskolski and Kutch"], ["num_employees", 6], ["market_id", 84], ["created_at", "2016-10-04 23:49:13.326474"], ["updated_at", "2016-10-04 23:49:13.326474"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 422], ["name", "Goldner Inc"], ["num_employees", 3], ["market_id", 85], ["created_at", "2016-10-04 23:49:13.328389"], ["updated_at", "2016-10-04 23:49:13.328389"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 423], ["name", "Ebert-Schaefer"], ["num_employees", 7], ["market_id", 85], ["created_at", "2016-10-04 23:49:13.330148"], ["updated_at", "2016-10-04 23:49:13.330148"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 424], ["name", "Ward, Bayer and Lockman"], ["num_employees", 10], ["market_id", 85], ["created_at", "2016-10-04 23:49:13.332064"], ["updated_at", "2016-10-04 23:49:13.332064"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 425], ["name", "Luettgen-Koss"], ["num_employees", 5], ["market_id", 85], ["created_at", "2016-10-04 23:49:13.334124"], ["updated_at", "2016-10-04 23:49:13.334124"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 426], ["name", "Lynch Inc"], ["num_employees", 5], ["market_id", 85], ["created_at", "2016-10-04 23:49:13.336581"], ["updated_at", "2016-10-04 23:49:13.336581"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 427], ["name", "Sipes-Howell"], ["num_employees", 9], ["market_id", 86], ["created_at", "2016-10-04 23:49:13.338832"], ["updated_at", "2016-10-04 23:49:13.338832"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 428], ["name", "Thiel, Carter and Heathcote"], ["num_employees", 10], ["market_id", 86], ["created_at", "2016-10-04 23:49:13.340855"], ["updated_at", "2016-10-04 23:49:13.340855"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 429], ["name", "Hegmann LLC"], ["num_employees", 5], ["market_id", 86], ["created_at", "2016-10-04 23:49:13.343048"], ["updated_at", "2016-10-04 23:49:13.343048"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 430], ["name", "Lebsack Inc"], ["num_employees", 10], ["market_id", 86], ["created_at", "2016-10-04 23:49:13.346108"], ["updated_at", "2016-10-04 23:49:13.346108"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 431], ["name", "Runte and Sons"], ["num_employees", 4], ["market_id", 86], ["created_at", "2016-10-04 23:49:13.348157"], ["updated_at", "2016-10-04 23:49:13.348157"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 432], ["name", "Howe, Auer and Altenwerth"], ["num_employees", 9], ["market_id", 87], ["created_at", "2016-10-04 23:49:13.350008"], ["updated_at", "2016-10-04 23:49:13.350008"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 433], ["name", "Cassin Group"], ["num_employees", 8], ["market_id", 88], ["created_at", "2016-10-04 23:49:13.351823"], ["updated_at", "2016-10-04 23:49:13.351823"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 434], ["name", "Miller Inc"], ["num_employees", 5], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.353827"], ["updated_at", "2016-10-04 23:49:13.353827"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 435], ["name", "Deckow Group"], ["num_employees", 7], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.355683"], ["updated_at", "2016-10-04 23:49:13.355683"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 436], ["name", "Mohr-Yost"], ["num_employees", 5], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.357488"], ["updated_at", "2016-10-04 23:49:13.357488"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 437], ["name", "Dibbert, Jones and Schroeder"], ["num_employees", 9], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.359278"], ["updated_at", "2016-10-04 23:49:13.359278"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 438], ["name", "Zulauf-Morissette"], ["num_employees", 1], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.361118"], ["updated_at", "2016-10-04 23:49:13.361118"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 439], ["name", "Sawayn Inc"], ["num_employees", 7], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.362984"], ["updated_at", "2016-10-04 23:49:13.362984"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 440], ["name", "Johnston Inc"], ["num_employees", 6], ["market_id", 89], ["created_at", "2016-10-04 23:49:13.364958"], ["updated_at", "2016-10-04 23:49:13.364958"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 441], ["name", "Mann-Stanton"], ["num_employees", 3], ["market_id", 90], ["created_at", "2016-10-04 23:49:13.367237"], ["updated_at", "2016-10-04 23:49:13.367237"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 442], ["name", "Hamill, Gislason and Schowalter"], ["num_employees", 5], ["market_id", 90], ["created_at", "2016-10-04 23:49:13.369772"], ["updated_at", "2016-10-04 23:49:13.369772"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 443], ["name", "Rosenbaum-Jast"], ["num_employees", 4], ["market_id", 90], ["created_at", "2016-10-04 23:49:13.371774"], ["updated_at", "2016-10-04 23:49:13.371774"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 444], ["name", "Ullrich Group"], ["num_employees", 3], ["market_id", 90], ["created_at", "2016-10-04 23:49:13.373627"], ["updated_at", "2016-10-04 23:49:13.373627"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 445], ["name", "Gutkowski, Kutch and Batz"], ["num_employees", 7], ["market_id", 90], ["created_at", "2016-10-04 23:49:13.375693"], ["updated_at", "2016-10-04 23:49:13.375693"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 446], ["name", "Wisoky Group"], ["num_employees", 6], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.377821"], ["updated_at", "2016-10-04 23:49:13.377821"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 447], ["name", "Douglas LLC"], ["num_employees", 3], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.379814"], ["updated_at", "2016-10-04 23:49:13.379814"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 448], ["name", "Harris Inc"], ["num_employees", 7], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.382151"], ["updated_at", "2016-10-04 23:49:13.382151"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 449], ["name", "Torphy, Baumbach and Kilback"], ["num_employees", 9], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.384493"], ["updated_at", "2016-10-04 23:49:13.384493"]]
+  [1m[35m (0.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 450], ["name", "Keeling Group"], ["num_employees", 1], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.387513"], ["updated_at", "2016-10-04 23:49:13.387513"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 451], ["name", "O'Connell Group"], ["num_employees", 7], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.389391"], ["updated_at", "2016-10-04 23:49:13.389391"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 452], ["name", "Feest-Ledner"], ["num_employees", 4], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.391118"], ["updated_at", "2016-10-04 23:49:13.391118"]]
+  [1m[36m (0.5ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 453], ["name", "Dickinson Group"], ["num_employees", 7], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.392879"], ["updated_at", "2016-10-04 23:49:13.392879"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 454], ["name", "Mante-Olson"], ["num_employees", 11], ["market_id", 91], ["created_at", "2016-10-04 23:49:13.394955"], ["updated_at", "2016-10-04 23:49:13.394955"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 455], ["name", "Dickinson Inc"], ["num_employees", 7], ["market_id", 92], ["created_at", "2016-10-04 23:49:13.397161"], ["updated_at", "2016-10-04 23:49:13.397161"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 456], ["name", "Kub, Jenkins and Price"], ["num_employees", 7], ["market_id", 92], ["created_at", "2016-10-04 23:49:13.399000"], ["updated_at", "2016-10-04 23:49:13.399000"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 457], ["name", "Cruickshank, Feeney and Emmerich"], ["num_employees", 8], ["market_id", 51], ["created_at", "2016-10-04 23:49:13.400897"], ["updated_at", "2016-10-04 23:49:13.400897"]]
+  [1m[35m (0.6ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 458], ["name", "Huels-Kunde"], ["num_employees", 3], ["market_id", 54], ["created_at", "2016-10-04 23:49:13.402930"], ["updated_at", "2016-10-04 23:49:13.402930"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["id", 459], ["name", "Breitenberg, Conroy and Lynch"], ["num_employees", 10], ["market_id", 61], ["created_at", "2016-10-04 23:49:13.405077"], ["updated_at", "2016-10-04 23:49:13.405077"]]
+  [1m[35m (0.5ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "vendors" ("id", "name", "num_employees", "market_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)  [["id", 460], ["name", "Hagenes-Hudson"], ["num_employees", 5], ["market_id", 79], ["created_at", "2016-10-04 23:49:13.406925"], ["updated_at", "2016-10-04 23:49:13.406925"]]
+  [1m[36m (0.6ms)[0m  [1mcommit transaction[0m
