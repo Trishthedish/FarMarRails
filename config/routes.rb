@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'sales/index'
+
+  get 'sales/new'
+
+  get 'sales/create'
+
+  get 'sales/show'
+
+  get 'sales/edit'
+
+  get 'sales/destroy'
+
   get 'vendors/index'
 
   get 'vendors/new'
