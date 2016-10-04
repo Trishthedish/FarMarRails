@@ -5,3 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+# require 'CSV'
+#
+# CSV.foreach('seeds_csv/posts.csv', :headers =>true) do |csv_obj|
+#   post.create(id: csv_obj['id'].to_i, title: csv_obj['title'], body: csv_obj['body'], author: csv_obj['author'])
+# end
