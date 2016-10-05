@@ -1,5 +1,6 @@
 class MarketsController < ApplicationController
   def index
+    @markets = Market.all
   end
 
   def new
@@ -9,7 +10,10 @@ class MarketsController < ApplicationController
   end
 
   def show
-    @mymarket=Market.find(params[:id])
+    @mymarket = Market.find(params[:id])
+    if @mymarket == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
   end
 
   def edit
