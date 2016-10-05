@@ -3,14 +3,22 @@ class MarketsController < ApplicationController
     @markets = Market.all
   end
 
+  def show
+    @mymarket = Market.find(params[:id])
+    if @mymarket == nil
+      render :file => 'public/404.html', :status => :not_found
+    end 
+  end
+
   def new
+
   end
 
   def create
   end
 
   def show
-    @market = Marker.find
+    @my
   end
 
   def edit

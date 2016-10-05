@@ -1,13 +1,11 @@
-<h1>Markets#index</h1>
-<p>Find me in app/views/markets/index.html.erb</p>
-<% @markets.each do |market| %>
+#notes.rb
 
-<%= link_to(market.name,show_path(market.id))%>
-<%= " #{market.city}, #{market.state}"  %></p>
-<% end %>
-<!-- <div>
+
+1. Found this arrangement to display all City's in one place with all of their details. Instead I'm going to focus only simply showing a link with name on it. then once you click on it will show you more details.
+<div>
   <ul>
     <% @markets.each do |market| %>
+    <%=  link_to(market.name,show_path(market.id))%>
     <li>Market Name: <%=market[:name]  %></li>
     <li>Address: <%=market.address %></li>
     <li>City: <%=market.city %></li>
@@ -16,4 +14,4 @@
     <li>Zip: <%=market.zip %></li>
   </ul>
   <% end %>
-</div> -->
+</div>
