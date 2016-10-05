@@ -10,7 +10,7 @@ Rails.application.routes.draw do
 
 
 
-  get 'markets/index'
+  get 'markets/index' => 'markets#index', as: 'markets_index'
 
   get 'markets/new'
 
