@@ -1,5 +1,6 @@
 class MarketsController < ApplicationController
   def index
+    @markets = Market.all
   end
 
   def new
@@ -9,6 +10,7 @@ class MarketsController < ApplicationController
   end
 
   def show
+    @market = Marker.find
   end
 
   def edit
