@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
 
-  get 'users/index'
+  get 'users/index' => 'users#index', as: 'user_index'
 
   get 'users/new'
 
@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   get 'users/edit'
 
   get 'users/destroy'
+
 
   root to: 'markets#index'
 
