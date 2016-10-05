@@ -33,3 +33,9 @@
 <%= " #{market.city}, #{market.state}"  %></p>
 <%= "#"  %>
 <% end %> -->
+Showing
+note sure why!
+
+ /Users/trishgriego/ada/week9/FarMarRails/app/views/markets/show.html.erb where line #8 raised:
+
+undefined method `[]' for nil:NilClass
