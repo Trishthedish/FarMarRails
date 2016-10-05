@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
-  root to: 'markets#index'
+  # root to: 'markets#index'
+
+  root to: 'vendors#index'
 
   get 'products/index'
 
@@ -18,10 +20,22 @@ Rails.application.routes.draw do
 
   get 'markets/edit'
 
-  resources :vendors do
+  get 'vendors/edit' => 'vendors#edit', as: 'vendors_edit'
 
-    resources :sales, only: [:index]
-  end
+  get 'vendors/index' => 'vendors#index', as: 'vendors_index'
+
+  get 'vendors/new'
+
+  post 'vendors/create' => 'vendors#create', as:'vendors_create'
+
+  get 'vendors/:id/show'  => 'vendors#show', as:'vendors_show'
+
+  post 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+
+  # resources :vendors do
+  #   resources :products
+  #   resources :sales
+  # end
 
 
   # The priority is based upon order of creation: first created -> highest priority.
