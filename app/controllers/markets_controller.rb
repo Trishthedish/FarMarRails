@@ -11,6 +11,7 @@ class MarketsController < ApplicationController
 
   def show
     @mymarket = Market.find(params[:id])
+    @myvendors=@mymarket.vendors
     if @mymarket == nil
       render :file => 'public/404.html', :status => :not_found
     end
