@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'markets#index'
+
   get 'products/index'
 
   get 'products/new'
@@ -41,7 +43,7 @@ Rails.application.routes.draw do
 
   get 'markets/create'
 
-  get 'markets/show'
+  get 'markets/show/:id'  => 'markets#show', as: 'markets_show'
 
   get 'markets/edit'
 
