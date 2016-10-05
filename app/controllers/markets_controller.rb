@@ -3,14 +3,26 @@ class MarketsController < ApplicationController
     @markets = Market.all
   end
 
+  def show
+    @mymarket = Market.find(params[:id])
+    if @mymarket == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
+  end
+
+# would I need to write a find method... to show that once clicked.. you can see the details of each individual market.
+
+
+
   def new
+
   end
 
   def create
   end
 
   def show
-    @market = Marker.find
+    @my
   end
 
   def edit

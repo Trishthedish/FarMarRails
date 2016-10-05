@@ -2,10 +2,11 @@
 <p>Find me in app/views/markets/index.html.erb</p>
 <% @markets.each do |market| %>
 
-<p><%= link_to(market.name,show_path(market.id))%>
+<%= link_to(market[:name],show_path(market[:id]))%>
 <%= " #{market.city}, #{market.state}"  %></p>
 <% end %>
 <!-- <div>
+above changed it to see if would work when phrased like tasklist
   <ul>
     <% @markets.each do |market| %>
     <li>Market Name: <%=market[:name]  %></li>
