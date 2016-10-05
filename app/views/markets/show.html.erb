@@ -1,2 +1,16 @@
 <h1>Markets#show</h1>
 <p>Find me in app/views/markets/show.html.erb</p>
+
+<h1>Market Details</h1>
+<article class="">
+  <ul>
+    <% @params %>
+    <li>Market Id: <%=@mymarket[:id] %></li>
+    <li>Market name: <%=@mymarket[:name] %></li>
+    <!-- <li>Address: <%=@mymarket.address %></li>
+    <li>City: <%=@mymarket.city%></li>
+    <li>County: <%=@mymarket.county %></li>
+    <li>State: <%=@mymarket.state %></li>
+    <li>Zip: <%=@mymarket.zip %></li> -->
+  </ul>
+</article>

@@ -15,3 +15,21 @@
   </ul>
   <% end %>
 </div>
+
+<!-- <div>
+ <ul>
+   <%= @markets.each do |market| %>
+   <li>Market Name: <%=market[:name]  %></li>
+   <li>Address: <%=market.address %></li>
+   <li>City: <%=market.city %></li>
+   <li>County: <%=market.county %></li>
+   <li>State: <%=market.state %></li>
+   <li>Zip: <%=market.zip %></li>
+ </ul>
+ <% end %>
+</div>
+<%= link_to(market.name,show_path(market.id))%>
+
+<%= " #{market.city}, #{market.state}"  %></p>
+<%= "#"  %>
+<% end %> -->
