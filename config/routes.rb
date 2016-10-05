@@ -1,41 +1,12 @@
 Rails.application.routes.draw do
+
   root to: 'markets#index'
 
   get 'products/index'
 
-  get 'products/new'
 
-  get 'products/create'
 
-  get 'products/show'
 
-  get 'products/edit'
-
-  get 'products/destroy'
-
-  get 'sales/index'
-
-  get 'sales/new'
-
-  get 'sales/create'
-
-  get 'sales/show'
-
-  get 'sales/edit'
-
-  get 'sales/destroy'
-
-  get 'vendors/index'
-
-  get 'vendors/new'
-
-  get 'vendors/create'
-
-  get 'vendors/show'
-
-  get 'vendors/edit'
-
-  get 'vendors/destroy'
 
   get 'markets/index'
 
@@ -47,7 +18,11 @@ Rails.application.routes.draw do
 
   get 'markets/edit'
 
-  get 'markets/destroy'
+  resources :vendors do
+
+    resources :sales, only: [:index]
+  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
