@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'markets#index'
+
   get 'products/index'
 
   get 'products/new'
@@ -35,15 +37,13 @@ Rails.application.routes.draw do
 
   get 'vendors/destroy'
 
-###### Markets Routes ######
-
-  get 'markets/index' => 'markets#index', as: 'index'
+  get 'markets/index'
 
   get 'markets/new'
 
   get 'markets/create'
 
-  get 'markets/show' => 'markets#show', as: 'show'
+  get 'markets/show/:id'  => 'markets#show', as: 'markets_show'
 
   get 'markets/edit'
 
