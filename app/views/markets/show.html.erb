@@ -10,4 +10,8 @@
 		<p><%= vendor.name %></p>
 	<%end%>
 </section>
+<section class='button'>
+		
+	<%= button_to("edit market", markets_edit_path(@mymarket.id), method: :get) %>
+</section>
 
