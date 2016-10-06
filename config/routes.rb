@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
 
-  get 'products/index'
-
   put 'markets/:id/update' => 'markets#update', as:'markets_update'
 
   get 'markets/index' => 'markets#index', as: 'markets_index'
@@ -29,7 +27,8 @@ Rails.application.routes.draw do
 
   get 'markets/:id/edit' => 'markets#edit', as: 'markets_edit'
 
-  get 'vendors/edit' => 'vendors#edit', as: 'vendors_edit'
+# adding an id to this so that we can edit vendor within market show page.
+  get 'vendors/:id/edit' => 'vendors#edit', as: 'vendors_edit'
 
   get 'vendors/index' => 'vendors#index', as: 'vendors_index'
 
@@ -39,7 +38,26 @@ Rails.application.routes.draw do
 
   get 'vendors/:id/show'  => 'vendors#show', as:'vendors_show'
 
-  post 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+  put 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+
+  delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
+
+
+  put 'products/:id/update' => 'products#update', as:'products_update'
+
+  get 'products/index' => 'products#index', as: 'products_index'
+
+  get 'products/new' => 'products#new', as: 'products_new'
+
+  post 'products/create' => 'products#create', as: 'products_create'
+
+  get 'products/show/:id'  => 'products#show', as: 'products_show'
+
+  get 'products/:id/edit' => 'products#edit', as: 'products_edit'
+
+  delete 'products/:id/delete' => 'products#destroy', as: 'products_delete'
+
+
 
   get 'sales/:vendor_id/:product_id/new' => 'sales#new', as: 'sales_new'
 
