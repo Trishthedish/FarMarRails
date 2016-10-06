@@ -11,7 +11,10 @@
       <h2>My Products</h2>
       <% @myproducts.each do |product| %>
         <p><%= product.name %></p>
+         <section class='button'>
+        <%= button_to("add sale", sales_new_path(@myvendor.id,product.id), method: :get) %>
+      </section>
       <% end %>
-
+     
 
 </article>
