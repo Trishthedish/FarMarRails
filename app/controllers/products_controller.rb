@@ -1,5 +1,6 @@
 class ProductsController < ApplicationController
   def index
+    @products = Product.all
   end
 
   def new
@@ -9,9 +10,11 @@ class ProductsController < ApplicationController
   end
 
   def show
+    @myproducts = Product.find(params[:id].to_i)
   end
 
   def edit
+    @myproducts = Product.find(params[:id].to_i)
   end
 
   def destroy
