@@ -39,27 +39,16 @@ class VendorsController < ApplicationController
   end
 
   def sales_list
-    @total_sales = []
+    @sales = []
     @myvendor = Vendor.find(params[:id].to_i)
     @mysale = Sale.all
     @mysale.each do |sale|
     if @myvendor.id == sale.vendor_id
-      @total_sales << sale.amount
+      @sales << sale
     end
     end
-    return @total_sales
+    return @sales
   end
 
-
-  def ven_products
-    @list_prods = []
-    @myproducts = Product.find(params[:id].to_i)
-    @myproducts.each do |product|
-      if product.vendor_id == @myvendor.id
-        @list_prods <<  product.name
-      end
-    end
-    return @list_prods
-  end
 
 end#end of class
