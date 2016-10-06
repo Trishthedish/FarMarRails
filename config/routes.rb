@@ -15,8 +15,6 @@ Rails.application.routes.draw do
 
   root to: 'users#index'
 
-  get 'products/index'
-
   put 'markets/:id/update' => 'markets#update', as:'markets_update'
 
   get 'markets/index' => 'markets#index', as: 'markets_index'
@@ -40,6 +38,22 @@ Rails.application.routes.draw do
   get 'vendors/:id/show'  => 'vendors#show', as:'vendors_show'
 
   post 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+
+  put 'products/:id/update' => 'products#update', as:'products_update'
+
+  get 'products/index' => 'products#index', as: 'products_index'
+
+  get 'products/new' => 'products#new', as: 'products_new'
+
+  post 'products/create' => 'products#create', as: 'products_create'
+
+  get 'products/show/:id'  => 'products#show', as: 'products_show'
+
+  get 'products/:id/edit' => 'products#edit', as: 'products_edit'
+
+  delete 'products/:id/delete' => 'products#destroy', as: 'products_delete'
+
+
 
   # resources :vendors do
   #   resources :products
