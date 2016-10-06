@@ -1,2 +1,22 @@
 <h1>Markets#new</h1>
 <p>Find me in app/views/markets/new.html.erb</p>
+<%=form_for(@market, url: markets_create_path) do |m|%>
+<%= m.label :name %>
+<%= m.text_field :name %>
+
+<%= m.label :address %>
+<%= m.text_field :address %>
+
+<%= m.label :city %>
+<%= m.text_field :city %>
+
+<%= m.label :county %>
+<%= m.text_field :county %>
+
+<%= m.label :state %>
+<%= m.text_field :state %>
+
+<%= m.label :zip %>
+<%= m.text_field :zip %>
+<%= m.submit  %>
+<% end %>

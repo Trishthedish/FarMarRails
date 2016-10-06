@@ -2,6 +2,7 @@
 <p>Find me in app/views/markets/index.html.erb</p>
 
 <section>
+<%=link_to "create", markets_new_path %>
 <% @markets.each do |market| %>
 <p><%= link_to(market.name, markets_show_path(market.id)) %>
 <%= "#{market[:city]}, #{market[:state]}"  %></p>

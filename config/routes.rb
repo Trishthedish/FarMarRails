@@ -12,9 +12,9 @@ Rails.application.routes.draw do
 
   get 'markets/index' => 'markets#index', as: 'markets_index'
 
-  get 'markets/new'
+  get 'markets/new' => 'markets#new', as: 'markets_new'
 
-  get 'markets/create'
+  post 'markets/create' => 'markets#create', as: 'markets_create'
 
   get 'markets/show/:id'  => 'markets#show', as: 'markets_show'
 

@@ -4,6 +4,7 @@ class MarketsController < ApplicationController
   end
 
   def new
+    @market = Market.new
   end
 
   def create
