@@ -1,6 +1,24 @@
 #notes.rb
 As a market, I can create, edit, or delete any Vendor
 
+  def update
+    @myvendor = Vendor.find(params[:id])
+    if @myvendor.update({name: params[:vendor][:name], num_employees: params[:vendor][:num_employees]})
+    @myvendor.save
+    redirect_to markets_show_path(@myvendor.id)
+    else
+      render "edit"
+    end
+    if @myvendor == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
+  end
+
+
+
+
+
+
 
   <%=button_to("delete vendor", vendors_destroy_path(vendor.id), method: :destroy)%>
 1. Found this arrangement to display all City's in one place with all of their details. Instead I'm going to focus only simply showing a link with name on it. then once you click on it will show you more details.

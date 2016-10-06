@@ -25,20 +25,21 @@ class VendorsController < ApplicationController
     @vendor_method = :put
     @vendor_path =  vendors_update_path(@myvendor.id)
     if @myvendor == nil
-      render :file => 'public/404.html', :status => :not_found
+      render :file => 'public/404.html',
+          :status => :not_found
     end
   end
 
   def update
     @myvendor = Vendor.find(params[:id])
-    if @myvendor.update({name: params[:vendor][:name], num_employees: params[:vendor][:num_employees]})
-    redirect_to markets_show_path(@myvendor.id)
-    else
-      render "edit"
-    end
+    @mymarket = @myvendor.market
     if @myvendor == nil
       render :file => 'public/404.html', :status => :not_found
     end
+    @myvendor.name = params[:vendor][:name]
+    @myvendor.num_employees = params[:vendor][:num_employees]
+    @myvendor.save
+    redirect_to markets_show_path(@mymarket.id)
   end
 
   def destroy
