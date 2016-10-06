@@ -7,3 +7,7 @@
 <%= "#{market[:city]}, #{market[:state]}"  %></p>
 <% end %>
 </section>
+
+<section class='button'>
+	<%= button_to("add market", {action: "new"}, method: :get) %>
+</section>

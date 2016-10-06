@@ -17,17 +17,17 @@ Rails.application.routes.draw do
 
   get 'products/index'
 
-
+  put 'markets/:id/update' => 'markets#update', as:'markets_update'
 
   get 'markets/index' => 'markets#index', as: 'markets_index'
 
   get 'markets/new'
 
-  get 'markets/create'
+  post 'markets/create' => 'markets#create', as: 'markets_create'
 
   get 'markets/show/:id'  => 'markets#show', as: 'markets_show'
 
-  get 'markets/edit'
+  get 'markets/:id/edit' => 'markets#edit', as: 'markets_edit'
 
   get 'vendors/edit' => 'vendors#edit', as: 'vendors_edit'
 
