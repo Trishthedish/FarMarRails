@@ -22,7 +22,8 @@ class VendorsController < ApplicationController
 
   def edit
     @myvendor = Vendor.find(params[:id].to_i)
-    @vendor_method = vendors_update_path(@myvendor.id)
+    @vendor_method = :put
+    @vendor_path =  vendors_update_path(@myvendor.id)
     if @myvendor == nil
       render :file => 'public/404.html', :status => :not_found
     end
@@ -30,17 +31,21 @@ class VendorsController < ApplicationController
 
   def update
     @myvendor = Vendor.find(params[:id])
-    if @myvendor == nil
-      render :file => 'public/404.html',
-      :status => :not_found
+    if @myvendor.update({name: params[:vendor][:name], num_employees: params[:vendor][:num_employees]})
+    redirect_to markets_show_path(@myvendor.id)
+    else
+      render "edit"
     end
-    @myvendor.name = params[:vendor][:name]
-    @myvendor.num_employees = params[:vendor][:num_employees]
-    redirect_to vendors_show_path(@myvendor.id)
+    if @myvendor == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
   end
 
-
   def destroy
+    @myvendor = Vendor.find(params[:id])
+    @myvendor.destroy
+    redirect_to markets_index
+    flash[:alert] = "vendor deleted"
   end
 
   private

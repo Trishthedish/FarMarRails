@@ -40,7 +40,10 @@ Rails.application.routes.draw do
 
   get 'vendors/:id/show'  => 'vendors#show', as:'vendors_show'
 
-  post 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+  put 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+
+  delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
+
 
   # resources :vendors do
   #   resources :products
