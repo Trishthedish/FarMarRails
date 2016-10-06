@@ -29,7 +29,8 @@ Rails.application.routes.draw do
 
   get 'markets/:id/edit' => 'markets#edit', as: 'markets_edit'
 
-  get 'vendors/edit' => 'vendors#edit', as: 'vendors_edit'
+# adding an id to this so that we can edit vendor within market show page.
+  get 'vendors/:id/edit' => 'vendors#edit', as: 'vendors_edit'
 
   get 'vendors/index' => 'vendors#index', as: 'vendors_index'
 
@@ -39,7 +40,10 @@ Rails.application.routes.draw do
 
   get 'vendors/:id/show'  => 'vendors#show', as:'vendors_show'
 
-  post 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+  put 'vendors/:id/update' => 'vendors#update', as:'vendors_update'
+
+  delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
+
 
   # resources :vendors do
   #   resources :products

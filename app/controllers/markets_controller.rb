@@ -24,10 +24,12 @@ class MarketsController < ApplicationController
   def show
     #for some reason you don't need to change params[:id] to an integer
     @mymarket = Market.find(params[:id])
-    @myvendors=@mymarket.vendors
+    @myvendors = @mymarket.vendors
     if @mymarket == nil
       render :file => 'public/404.html', :status => :not_found
     end
+
+
   end
 
   def edit
@@ -43,12 +45,10 @@ class MarketsController < ApplicationController
 
   def update
     @mymarket = Market.find(params[:id])
-
     if @mymarket == nil
       render :file => 'public/404.html',
           :status => :not_found
     end
-    
     @mymarket.name = params[:market][:name]
     @mymarket.address = params[:market][:address]
     @mymarket.city = params[:market][:city]
