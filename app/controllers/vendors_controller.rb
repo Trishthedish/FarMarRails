@@ -44,7 +44,7 @@ class VendorsController < ApplicationController
   def destroy
     @myvendor = Vendor.find(params[:id])
     @myvendor.destroy
-    redirect_to markets_index
+    redirect_to markets_show_path(@myvendor.id)
     flash[:alert] = "vendor deleted"
   end
 
