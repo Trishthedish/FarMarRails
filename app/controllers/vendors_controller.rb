@@ -5,6 +5,9 @@ class VendorsController < ApplicationController
   end
 
   def new
+    @myvendor = Vendor.new
+    @vendor_method = :post
+    @vendor_path = vendors_create_path
   end
 
   def create
@@ -19,7 +22,23 @@ class VendorsController < ApplicationController
 
   def edit
     @myvendor = Vendor.find(params[:id].to_i)
+    @vendor_method = vendors_update_path(@myvendor.id)
+    if @myvendor == nil
+      render :file => 'public/404.html', :status => :not_found
+    end
   end
+
+  def update
+    @myvendor = Vendor.find(params[:id])
+    if @myvendor == nil
+      render :file => 'public/404.html',
+      :status => :not_found
+    end
+    @myvendor.name = params[:vendor][:name]
+    @myvendor.num_employees = params[:vendor][:num_employees]
+    redirect_to vendors_show_path(@myvendor.id)
+  end
+
 
   def destroy
   end

@@ -3,14 +3,23 @@
 	<p>id: <%= @mymarket.id %></p>
 	<p>name: <%= @mymarket.name %></p>
 	<p>address: <%=@mymarket.address %> <%=@mymarket.city%> <%=@mymarket.county%> <%=@mymarket.state%>, <%=@mymarket.zip%></p>
-  <section class='button'>
-
-    <%= button_to("edit market", markets_edit_path(@mymarket.id), method: :get) %>
-  </section>
+  <!-- #Market edit button -->
+    <section class='button'> <%= button_to("edit market", markets_edit_path(@mymarket.id), method: :get) %>
+    </section>
 </section>
 <section>
 	<h2>Vendors</h2>
 	<% @myvendors.each do |vendor| %>
 		<p><%= vendor.name %></p>
-	<%end%>
+<%= button_to("edit vendor", vendors_edit_path(vendor.id), method: :get)%>
+  <%end%>
+
+
+
+      <!-- #vendor edit button -->
+
+      <!-- #venor delete button -->
+    <!-- <%= button_to("delete vendor")%> -->
+
+
 </section>

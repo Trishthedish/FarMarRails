@@ -1,5 +1,5 @@
 #notes.rb
-
+As a market, I can create, edit, or delete any Vendor
 
 1. Found this arrangement to display all City's in one place with all of their details. Instead I'm going to focus only simply showing a link with name on it. then once you click on it will show you more details.
 <div>
@@ -42,4 +42,3 @@ undefined method `[]' for nil:NilClass
 
 
   <!-- <h1>Guest User<%=link_to(guests_index_path) %></h1> -->
-  
