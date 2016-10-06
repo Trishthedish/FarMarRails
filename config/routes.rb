@@ -1,12 +1,21 @@
 Rails.application.routes.draw do
 
-  # root to: 'markets#index'
 
-  root to: 'vendors#index'
+  get 'users/index' => 'users#index', as: 'user_index'
+
+  get 'users/new'
+
+  get 'users/create'
+
+  get 'users/show'
+
+  get 'users/edit'
+
+  get 'users/destroy'
+
+  root to: 'users#index'
 
   get 'products/index'
-
-
 
   put 'markets/:id/update' => 'markets#update', as:'markets_update'
 

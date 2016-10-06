@@ -1,7 +1,10 @@
-<h1>All Vendors</h1>
+<h1>Vendors#index</h1>
+<p>Find me in app/views/vendors/index.html.erb</p>
 
+<h1>All Vendors</h1>
 <% @vendors.each do |vendor|%>
 <article>
   <h2> <%= link_to(vendor.name, vendors_show_path(vendor[:id])) %></h2>
     <%end%>
+
 </article>
