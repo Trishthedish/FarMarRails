@@ -3,6 +3,7 @@
 	<p>id: <%= @mymarket.id %></p>
 	<p>name: <%= @mymarket.name %></p>
 	<p>address: <%=@mymarket.address %> <%=@mymarket.city%> <%=@mymarket.county%> <%=@mymarket.state%>, <%=@mymarket.zip%></p>
+  <p><%=link_to("delete", markets_delete_path(@mymarket.id), method: :delete)%></p>
 </section>
 <section>
 	<h2>Vendors</h2>
@@ -10,4 +11,3 @@
 		<p><%= vendor.name %></p>
 	<%end%>
 </section>
-

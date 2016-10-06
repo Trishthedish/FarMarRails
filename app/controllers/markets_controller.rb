@@ -17,7 +17,7 @@ class MarketsController < ApplicationController
     @mymarket.state = params[:market][:state]
     @mymarket.zip = params[:market][:zip]
     @mymarket.save
-    redirect_to markets_index_path  
+    redirect_to markets_index_path
   end
 
   def show
@@ -32,6 +32,11 @@ class MarketsController < ApplicationController
   end
 
   def destroy
+    @market = Market.find(params[:id])
+    @market.destroy
+    redirect_to markets_index_path
+    flash[:alert] = "market deleted"
   end
 
+# trish you will need to make params method private so others cant manipulate data.
 end

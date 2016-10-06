@@ -9,16 +9,18 @@ Rails.application.routes.draw do
 
 
 
-
-  get 'markets/index' => 'markets#index', as: 'markets_index'
+# changing to fit convetnion
+  get 'markets' => 'markets#index', as: 'markets_index'
 
   get 'markets/new' => 'markets#new', as: 'markets_new'
-
-  post 'markets/create' => 'markets#create', as: 'markets_create'
+# also changing to meet convention
+  post 'markets' => 'markets#create', as: 'markets_create'
 
   get 'markets/show/:id'  => 'markets#show', as: 'markets_show'
 
   get 'markets/edit'
+
+  delete 'markets/:id' => 'markets#destroy', as: 'markets_delete'
 
   get 'vendors/edit' => 'vendors#edit', as: 'vendors_edit'
 
