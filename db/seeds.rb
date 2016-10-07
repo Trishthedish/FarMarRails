@@ -5,23 +5,23 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-require 'CSV'
+require 'csv'
 
 CSV.foreach('seed_csvs/markets.csv') do |csv_obj|
-  Market.create(id: csv_obj[0].to_i, name: csv_obj[1], address: csv_obj[2], city: csv_obj[3], county: csv_obj[4], state: csv_obj[5], zip: csv_obj[6])
+  Market.create( name: csv_obj[1], address: csv_obj[2], city: csv_obj[3], county: csv_obj[4], state: csv_obj[5], zip: csv_obj[6])
 end
 
 #
 CSV.foreach('seed_csvs/vendors.csv') do |csv_obj|
-  Vendor.create(id: csv_obj[0].to_i, name: csv_obj[1], num_employees: csv_obj[2], market_id: csv_obj[3].to_i)
+  Vendor.create(name: csv_obj[1], num_employees: csv_obj[2], market_id: csv_obj[3].to_i)
 end
 
 CSV.foreach('seed_csvs/products.csv') do |csv_obj|
-  Product.create(id: csv_obj[0].to_i, name: csv_obj[1], vendor_id: csv_obj[2].to_i)
+  Product.create(name: csv_obj[1], vendor_id: csv_obj[2].to_i)
 end
 
 CSV.foreach('seed_csvs/sales.csv') do |csv_obj|
-  Sale.create(id: csv_obj[0].to_i, amount: csv_obj[1].to_i, purchase_time: DateTime.strptime(csv_obj[2], "%Y-%m-%d %H:%M:%S"), 
+  Sale.create(amount: csv_obj[1].to_i, purchase_time: DateTime.strptime(csv_obj[2], "%Y-%m-%d %H:%M:%S"), 
   	vendor_id: csv_obj[3].to_i, product_id: csv_obj[4].to_i)
 end
 

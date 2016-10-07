@@ -53,7 +53,7 @@ class VendorsController < ApplicationController
     @myvendor = Vendor.find(params[:id])
     @myvendor.destroy
     redirect_to markets_show_path(@myvendor.id)
-    flash[:alert] = "vendor deleted"
+    # flash[:alert] = "vendor deleted"
   end
 
   private

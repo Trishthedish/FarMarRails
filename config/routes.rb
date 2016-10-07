@@ -61,6 +61,10 @@ Rails.application.routes.draw do
 
 
 
+  get 'sales/:vendor_id/:product_id/new' => 'sales#new', as: 'sales_new'
+
+  post 'sales/:vendor_id/:product_id/create' => 'sales#create', as: 'sales_create'
+
   # resources :vendors do
   #   resources :products
   #   resources :sales
