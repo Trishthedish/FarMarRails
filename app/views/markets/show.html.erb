@@ -22,7 +22,7 @@
     </p>
     <%= button_to("edit vendor", vendors_edit_path(vendor.id), method: :get)%>
 
-    <%= button_to("delete vendor", vendors_destroy_path(vendor.id), method: :delete)%>
+    <%= button_to("delete vendor", vendors_destroy_path(vendor.id), method: :delete, data: {confirm: "Are you sure?"})%>
 
   <%end%>
 </section>
