@@ -17,6 +17,14 @@
     <% end %>
   </section>
 
+    <h3> My Sales By Month</h3>
+    
+     
+      <%= form_for @myvendor,  method: "get", url: show_sales_by_month_path do |f| %>
+        <%= select_year(2013) %>
+        <%= select_month(Time.now) %>
+        <%= f.submit "Find sales" %>
+      <% end %>
 
     <section id="products">
       <h2>My Products</h2>

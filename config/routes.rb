@@ -42,6 +42,8 @@ Rails.application.routes.draw do
 
   delete 'vendors/:id/destroy' => 'vendors#destroy', as: 'vendors_destroy'
 
+  get 'vendors/:id/show_sales_by_month' => 'vendors#show_sales_by_month', as: 'show_sales_by_month'
+
 
   put 'products/:id/update' => 'products#update', as:'products_update'
 

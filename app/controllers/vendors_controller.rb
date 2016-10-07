@@ -20,6 +20,14 @@ class VendorsController < ApplicationController
       @myproducts=@myvendors.products
   end
 
+  def show_sales_by_month
+      @myvendor = Vendor.find(params[:id])
+      @sales=@myvendor.sales
+      @sales_year=params[:date][:year]
+      @sales_month=params[:date][:month]
+      @sales_wanted=@sales.in_month(@sales_month).in_year(@sales_year)
+  end
+
   def edit
     @myvendor = Vendor.find(params[:id].to_i)
     @vendor_method = :put
