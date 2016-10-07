@@ -1,15 +1,16 @@
- <h1>Markets#show</h1>
+ <h1><%= @mymarket.name %></h1>
 <section>
-	<p>id: <%= @mymarket.id %></p>
-	<p>name: <%= @mymarket.name %></p>
+
+	<!-- <p>name: </p> -->
 	<p>address: <%=@mymarket.address %> <%=@mymarket.city%> <%=@mymarket.county%> <%=@mymarket.state%>, <%=@mymarket.zip%></p>
+  <!-- <p>id: <%= @mymarket.id %></p> -->
   <!-- #Market edit button -->
     <section class='button'> <%= button_to("edit market", markets_edit_path(@mymarket.id), method: :get) %>
     </section>
 </section>
 <section>
   <hr >
-	<h2>Vendors</h2>
+	<h2>Vendor's List</h2>
   <ul>
 
   </ul>

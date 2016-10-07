@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 
 
-  get 'users/index' => 'users#index', as: 'user_index'
+  get 'users/index' => 'users#index', as: 'users_index'
 
   get 'users/new'
 
