@@ -16,7 +16,7 @@
       <%= form_for @myvendor,  method: "get", url: show_sales_by_month_path do |f| %>
         <%= select_year(2013) %>
         <%= select_month(Time.now) %>
-        <%= f.submit %>
+        <%= f.submit "Find sales" %>
       <% end %>
 
       <h2>My Products</h2>
