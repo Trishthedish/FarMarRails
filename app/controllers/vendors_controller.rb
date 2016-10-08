@@ -25,9 +25,7 @@ class VendorsController < ApplicationController
       @sales=@myvendor.sales
       @sales_year=params[:date][:year]
       @sales_month=params[:date][:month]
-      @sales_wanted=@sales.in_month(@sales_month).in_year(@sales_year)
-      # @sales_wanted_total=@sales_wanted
-     
+      @sales_wanted=@sales.in_timeframe(@sales_month,@sales_year)
   end
 
   def edit
