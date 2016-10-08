@@ -26,6 +26,7 @@ class VendorsController < ApplicationController
       @sales_year=params[:date][:year]
       @sales_month=params[:date][:month]
       @sales_wanted=@sales.in_timeframe(@sales_month,@sales_year)
+      @total_sales_in_month=total_in_month(@sales_wanted)
   end
 
   def edit
@@ -58,6 +59,10 @@ class VendorsController < ApplicationController
   end
 
   private
+  def total_in_month(sales_in_month)
+   return sales_in_month.inject(0){|total_in_month, sale_in_month| total_in_month + sale_in_month.amount}
+  end
+
   def total
     @total_sales = []
     @myvendor = Vendor.find(params[:id].to_i)

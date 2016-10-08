@@ -24,5 +24,9 @@ module FarMarRails
     config.active_record.raise_in_transactional_callbacks = true
     config.assets.enabled = true
     config.assets.paths << Rails.root.join('app', 'assets', 'fonts')
+    
+    #adds everything in lib to be auto loaded with rails 
+    config.autoload_paths << Rails.root.join('lib')
+    Dir.glob(Rails.root.join 'lib', 'autorequire', '**', '*.rb').each {|f| require f}
   end
 end
